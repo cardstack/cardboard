@@ -1,0 +1,54 @@
+---
+language: node_js
+node_js:
+  - "8"
+
+sudo: required
+dist: trusty
+
+branches:
+  only:
+  - master
+    # make sure to include any branches you want to deploy to sandbox env here as well
+  - my_feature_branch
+
+services:
+  - docker
+
+matrix:
+  fast_finish: true
+
+before_install:
+  - echo "$SSH_PRIVATE_KEY" > $HOME/.ssh/id_rsa && chmod 400 $HOME/.ssh/id_rsa
+  - pip install --user awscli
+  - aws ecr --region us-east-1 get-login --no-include-email | bash
+  - docker network create cardstack
+  - docker run -d --rm --network cardstack --name postgres cardstack/pg-test
+
+install:
+  - cd deploy && yarn install && cd ..
+  - node ./deploy/build.js
+  - docker build -f deploy/Dockerfile.tests -t tests .
+
+script:
+  - docker run --rm --network cardstack --env PGHOST=postgres --env CI --env HUB_ENVIRONMENT=test --env TARGET_ENV="travis-$TRAVIS_BUILD_NUMBER"  tests
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: TARGET_NAME='staging-cardboard.stack.cards' deploy/deploy.sh staging $TRAVIS_BRANCH
+    on:
+      branch: master
+
+  # This environment is used to test your own branches. All you have to do
+  # is just push a commit that has the `branch` field below set to the name
+  # of your branch, and update the `branches` item above.
+  #
+  - provider: script
+    skip_cleanup: true
+    script: TARGET_NAME='sandbox-cardboard.stack.cards' deploy/deploy.sh sandbox $TRAVIS_BRANCH
+    on:
+      branch: my_feature_branch
+
+notifications:
+  email: false

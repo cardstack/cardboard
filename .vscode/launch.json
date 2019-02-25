@@ -1,0 +1,116 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run Hub",
+      "cwd": "${workspaceRoot}/cardboard",
+      "program": "${workspaceRoot}/node_modules/@cardstack/hub/bin/cardstack-hub.js",
+      "console": "integratedTerminal",
+      "args": [
+      ],
+      "env": {
+        "PGPORT": "5432",
+        "CARDSTACK_SESSIONS_KEY": "SBgEzGrr5IcpFbRQHQVjfSY/Rt70yXsljfcrl4k99Fw=",
+        "PGSEARCH_NAMESPACE": "cardboard_development",
+        "INITIAL_DATA_DIR": "${workspaceRoot}/cardboard/cardstack",
+        "HUB_ENVIRONMENT": "development",
+        "CARDSTACK_DEV": true,
+        "PORT": "3000",
+        "LOG_LEVELS": "cardstack/ethereum=debug,cardboard/crypto-compare=debug"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run Hub for acceptance tests",
+      "cwd": "${workspaceRoot}/cardboard",
+      "program": "${workspaceRoot}/node_modules/@cardstack/hub/bin/cardstack-hub.js",
+      "console": "integratedTerminal",
+      "args": [
+      ],
+      "env": {
+        "PGPORT": "5432",
+        "CARDSTACK_SESSIONS_KEY": "SBgEzGrr5IcpFbRQHQVjfSY/Rt70yXsljfcrl4k99Fw=",
+        "PGSEARCH_NAMESPACE": "cardboard_test",
+        "INITIAL_DATA_DIR": "${workspaceRoot}/cardboard/cardstack",
+        "HUB_ENVIRONMENT": "test",
+        "CARDSTACK_DEV": true,
+        "PORT": "3000"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run Hub for individual card test",
+      "cwd": "${workspaceRoot}/cards/asset-history",
+      "program": "${workspaceRoot}/node_modules/@cardstack/hub/bin/cardstack-hub.js",
+      "console": "integratedTerminal",
+      "args": [
+      ],
+      "env": {
+        "PGPORT": "5432",
+        "CARDSTACK_SESSIONS_KEY": "SBgEzGrr5IcpFbRQHQVjfSY/Rt70yXsljfcrl4k99Fw=",
+        "PGSEARCH_NAMESPACE": "cardboard_test",
+        "INITIAL_DATA_DIR": "${workspaceRoot}/cards/asset-history/tests/dummy/cardstack",
+        "HUB_ENVIRONMENT": "test",
+        "PORT": "3000"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Run ember",
+      "cwd": "${workspaceRoot}/cardboard",
+      "console": "integratedTerminal",
+      "program": "${workspaceRoot}/cardboard/node_modules/.bin/ember",
+      "args": [
+          "serve",
+          "--print"
+      ],
+      "env": {
+        "HUB_URL": "http://localhost:3000"
+      }
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch node tests",
+      "program": "${workspaceRoot}/node_modules/.bin/_mocha",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceRoot}",
+      "env": {
+        "HUB_ENVIRONMENT": "test",
+      },
+      "args": [
+        "./node-test-runner.js",
+        "--timeout",
+        "200000",
+        // "--grep",
+        // "does not allow a user to delete"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch card node tests",
+      "program": "${workspaceRoot}/node_modules/.bin/_mocha",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceRoot}/cards/asset-history",
+      "env": {
+        "HUB_ENVIRONMENT": "test",
+      },
+      "args": [
+        "../../node-test-runner.js",
+        "--timeout",
+        "200000",
+        "--grep",
+        "creates asset history when an asset exists"
+      ]
+    },
+  ]
+}

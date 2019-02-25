@@ -1,0 +1,108 @@
+{
+  "name": "cardboard",
+  "version": "0.0.0",
+  "private": true,
+  "repository": "",
+  "license": "MIT",
+  "author": "",
+  "directories": {
+    "doc": "doc",
+    "test": "tests"
+  },
+  "keywords": [
+    "cardstack-plugin"
+  ],
+  "cardstack-plugin": {
+    "api-version": 1,
+    "src": "cardstack"
+  },
+  "scripts": {
+    "build": "ember build",
+    "lint:hbs": "ember-template-lint .",
+    "lint:js": "eslint .",
+    "start": "ember serve",
+    "test": "ember test",
+    "node-tests": "HUB_ENVIRONMENT=test mocha ../node-test-runner.js --timeout 10000"
+  },
+  "devDependencies": {
+    "@cardstack/authentication": "^0.13.39",
+    "@cardstack/di": "^0.13.39",
+    "@cardstack/ephemeral": "^0.13.39",
+    "@cardstack/eslint-config": "^0.13.39",
+    "@cardstack/git": "^0.13.45",
+    "@cardstack/hub": "^0.13.39",
+    "@cardstack/jsonapi": "^0.13.39",
+    "@cardstack/logger": "^0.1.0",
+    "@cardstack/mobiledoc": "^0.13.39",
+    "@cardstack/plugin-utils": "^0.13.39",
+    "@cardstack/routing": "^0.13.39",
+    "@cardstack/test-support": "^0.13.39",
+    "@cardstack/tools": "^0.13.39",
+    "@ember/jquery": "^0.5.2",
+    "@ember/optional-features": "^0.6.3",
+    "babel-preset-env": "^1.7.0",
+    "broccoli-asset-rev": "^2.7.0",
+    "broccoli-funnel": "^2.0.2",
+    "broccoli-merge-trees": "^3.0.2",
+    "broccoli-source": "^1.1.0",
+    "co-body": "^6.0.0",
+    "ember-ajax": "^3.1.0",
+    "ember-animated-tools": "^0.4.0",
+    "ember-cli": "~3.5.0",
+    "ember-cli-app-version": "^3.2.0",
+    "ember-cli-babel": "^6.16.0",
+    "ember-cli-dependency-checker": "^3.0.0",
+    "ember-cli-deploy": "^1.0.1",
+    "ember-cli-deploy-build": "^1.1.0",
+    "ember-cli-deploy-cloudfront": "^1.2.0",
+    "ember-cli-deploy-compress": "^0.2.0",
+    "ember-cli-deploy-display-revisions": "^1.0.0",
+    "ember-cli-deploy-revision-data": "^1.0.0",
+    "ember-cli-deploy-s3": "^1.1.0",
+    "ember-cli-deploy-slack": "^1.0.0",
+    "ember-cli-deprecation-workflow": "^1.0.1",
+    "ember-cli-fastboot": "^2.0.0",
+    "ember-cli-htmlbars": "^3.0.0",
+    "ember-cli-htmlbars-inline-precompile": "^1.0.3",
+    "ember-cli-inject-live-reload": "^1.8.2",
+    "ember-cli-moment-shim": "^3.7.1",
+    "ember-cli-sri": "^2.1.1",
+    "ember-cli-uglify": "^2.1.0",
+    "ember-css-element-queries": "^1.0.0",
+    "ember-data": "~3.5.0",
+    "ember-export-application-global": "^2.0.0",
+    "ember-fetch": "^6.2.2",
+    "ember-inject-optional": "^0.1.0",
+    "ember-load-initializers": "^1.1.0",
+    "ember-maybe-import-regenerator": "^0.1.6",
+    "ember-moment": "^7.8.0",
+    "ember-qunit": "^4.1.2",
+    "ember-resolver": "^5.0.1",
+    "ember-source": "~3.7.0",
+    "ember-svg-jar": "^1.2.2",
+    "ember-template-lint": "^1.0.0-beta.6",
+    "ember-test-selectors": "^2.0.0",
+    "ember-welcome-page": "^3.2.0",
+    "eslint-plugin-ember": "^6.0.1",
+    "loader.js": "^4.7.0",
+    "lodash": "^4.17.11",
+    "moment-timezone": "^0.5.11",
+    "prember": "^1.0.0",
+    "qunit-dom": "^0.8.0",
+    "squishable-container": "^0.1.0",
+    "web3": "^1.0.0-beta.37"
+  },
+  "workspaces": {
+    "nohoist": [
+      "babel-preset-env"
+    ]
+  },
+  "engines": {
+    "node": "8.* || >= 10.*"
+  },
+  "ember-addon": {
+    "paths": [
+      "lib/cardstack-blueprints"
+    ]
+  }
+}

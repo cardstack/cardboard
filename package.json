@@ -1,0 +1,40 @@
+{
+  "name": "cardboard",
+  "version": "0.0.0",
+  "description": "Cardboard Cardstack application",
+  "repository": "https://github.com/cardstack/cardboard",
+  "author": "Hassan Abdel-Rahman <hassan.abdelrhaman@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8"
+  },
+  "devDependencies": {
+    "@cardstack/eslint-config": "^0.13.39",
+    "@cardstack/test-support": "^0.13.39",
+    "eslint": "^5.9.0",
+    "eslint-plugin-ember": "^6.0.1",
+    "eslint-plugin-mocha": "^5.2.0",
+    "eslint-plugin-node": "^8.0.0",
+    "glob": "^7.1.1",
+    "mocha": "^4.0.1",
+    "require-uncached": "^1.0.3",
+    "resolve": "^1.3.3"
+  },
+  "scripts": {
+    "start-prereqs": "docker run -d -p 5432:5432 --rm --name cardstack-pg cardstack/pg-test",
+    "stop-prereqs": "docker stop cardstack-pg",
+    "start": "cd cardboard && node ./node_modules/.bin/ember serve",
+    "start-hub": "cd cardboard && ember hub:start",
+    "start-ember": "cd cardboard && HUB_URL=http://localhost:3000 node ./node_modules/.bin/ember s",
+    "test": "mocha ./node-test-runner.js --timeout 10000 && cd cardboard && node ./node_modules/.bin/ember test",
+    "card-tests": "cd cardboard && node ./node_modules/.bin/ember test",
+    "node-tests": "mocha ./node-test-runner.js --timeout 10000",
+    "lint": "eslint . --cache"
+  },
+  "workspaces": [
+    "cards/*",
+    "packages/*",
+    "cardboard"
+  ],
+  "private": true
+}
