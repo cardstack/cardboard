@@ -1,6 +1,5 @@
 cards/*
 deploy/*
 bin/*
-shared-data/*
 card-test-runner.js
 node-test-runner.js
