@@ -1,5 +1,5 @@
 {
-  "name": "cardboard-<%= dasherizedModuleName %>",
+  "name": "cardboard-article",
   "version": "0.0.0",
   "keywords": [
     "cardstack-plugin",
