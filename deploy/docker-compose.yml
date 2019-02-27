@@ -29,6 +29,9 @@ services:
       - TRAVIS_BRANCH
       - GIT_PRIVATE_KEY
       - GIT_BRANCH_PREFIX
+      - GITHUB_CLIENT_ID
+      - GITHUB_CLIENT_SECRET
+      - GITHUB_TOKEN
 
 networks:
   default:
