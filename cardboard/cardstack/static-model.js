@@ -67,7 +67,7 @@ module.exports = function () {
               id: 'mock-user', // this ID is meant to be the github username. Please adjust as necessary
               attributes: {
                 name: "Mock User",
-                'avatar-url': "https://avatars2.githubusercontent.com/u/61075?v=4?v=3&s=80",
+                'avatar-url': "https://avatars2.githubusercontent.com/u/61075",
                 permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
               },
             },
