@@ -4,7 +4,7 @@ let sources = [
     id: '@cardstack/hub',
     attributes: {
       'plugin-config': {
-        'application-card': { type: 'app-cards', id: 'cardboard' }
+        'application-card': { type: 'boards', id: 'community' }
       }
     },
     relationships: {

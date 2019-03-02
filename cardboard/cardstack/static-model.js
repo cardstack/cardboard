@@ -2,8 +2,6 @@ const JSONAPIFactory = require('@cardstack/test-support/jsonapi-factory');
 const { readdirSync, existsSync } = require('fs');
 const { join } = require('path');
 const cardDir = join(__dirname, '../../cards');
-const cardboardRouter = require('./router');
-const defaultRouter = require('@cardstack/routing/cardstack/default-router');
 
 module.exports = function () {
   let factory = new JSONAPIFactory();
@@ -30,13 +28,6 @@ module.exports = function () {
         .withAttributes({ sourceType: `cardboard-${cardName}` });
     }
   }
-
-  let router = process.env.HUB_ENVIRONMENT === 'test' &&
-    process.env.TEST &&
-    process.env.TEST.includes('cards/') ? defaultRouter : cardboardRouter;
-  factory.addResource('content-types', 'app-cards')
-    .withAttributes({ router });
-  factory.addResource('app-cards', 'cardboard');
 
   factory.addResource('grants', 'app-card-grant')
     .withRelated('who', [{ type: 'groups', id: 'everyone' }])
@@ -119,12 +110,15 @@ factory.addResource('grants')
   .withRelated('types', contentTypes.concat([
     { type: 'content-types', id: 'content-types' },
     { type: 'content-types', id: 'spaces' },
-    { type: 'content-types', id: 'app-cards' },
   ]))
   .withAttributes({
     'may-read-resource': true,
     'may-read-fields': true,
   });
+
+// TODO need to create grant for anonymous read of articles when article is published
+// I think we can do with with the `who` relation where we are matching the article on a `field` type
+// that matches a field in the session that only `github-writers` posseses (maybe the `permissions` field?)
 
 factory.addResource('grants')
   .withRelated('who', [{ type: 'groups', id: 'github-writers' }])
