@@ -18,6 +18,19 @@ module.exports = [
     }
   },
   {
+    type: 'data-sources',
+    id: 'github',
+    attributes: {
+      'source-type': '@cardstack/github-auth',
+      params: {
+        permissions: [
+          { repo: 'cardstack/cardboard-data', permission: 'read' },
+          { repo: 'cardstack/cardboard-data', permission: 'write' },
+        ]
+      }
+    }
+  },
+  {
     type: 'grants',
     id: 'wide-open',
     attributes: {

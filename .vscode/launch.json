@@ -100,7 +100,7 @@
       "name": "Launch card node tests",
       "program": "${workspaceRoot}/node_modules/.bin/_mocha",
       "console": "integratedTerminal",
-      "cwd": "${workspaceRoot}/cards/asset-history",
+      "cwd": "${workspaceRoot}/cards/article",
       "env": {
         "HUB_ENVIRONMENT": "test",
       },
@@ -108,8 +108,8 @@
         "../../node-test-runner.js",
         "--timeout",
         "200000",
-        "--grep",
-        "creates asset history when an asset exists"
+        // "--grep",
+        // "allows github-writer to view non-published article"
       ]
     },
   ]
