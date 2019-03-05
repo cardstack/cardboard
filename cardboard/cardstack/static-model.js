@@ -116,22 +116,5 @@ factory.addResource('grants')
     'may-read-fields': true,
   });
 
-// TODO need to create grant for anonymous read of articles when article is published
-// I think we can do with with the `who` relation where we are matching the article on a `field` type
-// that matches a field in the session that only `github-writers` posseses (maybe the `permissions` field?)
-
-factory.addResource('grants')
-  .withRelated('who', [{ type: 'groups', id: 'github-writers' }])
-  .withRelated('types', [
-    // TODO add images, videos, and any other content types you can create from 4 edges
-    { type: 'content-types', id: 'articles' }
-  ])
-  .withAttributes({
-    'may-create-resource': true,
-    'may-update-resource': true,
-    'may-delete-resource': true,
-    'may-write-fields': true
-  });
-
   return factory.getModels();
 };

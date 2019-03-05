@@ -9,7 +9,7 @@ const scenario = new Fixtures({
     factory.addResource('<%= dasherizedModuleName %>s', '123')
       .withAttributes({
         title: 'Hello'
-      })
+      });
   }
 });
 

@@ -11,7 +11,13 @@ const scenario = new Fixtures({
         title: 'Hello',
         slug: 'hello',
         body: { 'atoms': [], 'cards': [], 'markups': [['strong'] ], 'version': '0.3.1', 'sections': [[1, 'p', [[0, [], 0, `Hi everybody! I'm squash.`]]]] }
-      })
+      });
+    factory.addResource('articles', '123')
+      .withAttributes({
+        title: 'Hello',
+        slug: 'hello',
+        body: { 'atoms': [], 'cards': [], 'markups': [['strong'] ], 'version': '0.3.1', 'sections': [[1, 'p', [[0, [], 0, `Hi everybody! I'm squash.`]]]] }
+      });
   }
 });
 

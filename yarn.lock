@@ -6093,7 +6093,7 @@ ember-compatibility-helpers@^1.1.1:
     ember-cli-version-checker "^2.1.1"
     semver "^5.4.1"
 
-"ember-composable-helpers@github:DockYard/ember-composable-helpers":
+ember-composable-helpers@DockYard/ember-composable-helpers:
   version "2.2.0"
   resolved "https://codeload.github.com/DockYard/ember-composable-helpers/tar.gz/a8def634ca6dc9bef01e9c03f331e6be170df460"
   dependencies:
@@ -6391,7 +6391,7 @@ ember-mobiledoc-dom-renderer@^0.6.0:
     ember-wormhole "^0.5.2"
     mobiledoc-dom-renderer "^0.6.5"
 
-"ember-mobiledoc-editor@github:backspace/ember-mobiledoc-editor#closure-actions":
+ember-mobiledoc-editor@backspace/ember-mobiledoc-editor#closure-actions:
   version "0.5.15"
   resolved "https://codeload.github.com/backspace/ember-mobiledoc-editor/tar.gz/76ccebc2649f527a4b0c508b7685bbd02f08acd1"
   dependencies:
@@ -6473,7 +6473,7 @@ ember-resolver@^5.0.1:
     ember-cli-version-checker "^2.0.0"
     resolve "^1.3.3"
 
-"ember-resource-metadata@github:habdelra/ember-resource-metadata#a1eaf9d1be6fe23aab45211e2b80939263016229":
+ember-resource-metadata@habdelra/ember-resource-metadata#a1eaf9d1be6fe23aab45211e2b80939263016229:
   version "0.3.0"
   resolved "https://codeload.github.com/habdelra/ember-resource-metadata/tar.gz/a1eaf9d1be6fe23aab45211e2b80939263016229"
   dependencies:
@@ -14520,9 +14520,9 @@ toidentifier@1.0.0:
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.0.tgz#7e1be3470f1e77948bc43d94a3c8f4d7752ba553"
   integrity sha512-yaOH/Pk/VEhBWWTlhI+qXxDFXlejDGcQipMlyxda9nthulaxLZUNcUqFxokp0vcYnvteJln5FNQDRrxj3YcbVw==
 
-"torii@git+https://github.com/ef4/torii.git#925ea3149cc9e35b77e39450cd634c65200768ce":
+"torii@https://github.com/ef4/torii#925ea3149cc9e35b77e39450cd634c65200768ce":
   version "0.9.6"
-  resolved "git+https://github.com/ef4/torii.git#925ea3149cc9e35b77e39450cd634c65200768ce"
+  resolved "https://github.com/ef4/torii#925ea3149cc9e35b77e39450cd634c65200768ce"
   dependencies:
     ember-cli-babel "^6.3.0"
 
