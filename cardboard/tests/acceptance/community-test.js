@@ -10,7 +10,7 @@ const scenario = new Fixtures({
     });
   },
 });
-module('Acceptance | portfolio', function(hooks) {
+module('Acceptance | cardboard', function(hooks) {
   setupApplicationTest(hooks);
   scenario.setupTest(hooks);
 

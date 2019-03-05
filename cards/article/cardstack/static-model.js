@@ -2,6 +2,17 @@ const JSONAPIFactory = require('@cardstack/test-support/jsonapi-factory');
 
 let factory = new JSONAPIFactory();
 factory.addResource('content-types', 'articles')
+  .withAttributes({
+    defaultIncludes: ['cover-image'],
+    fieldsets: {
+      embedded: [
+        { field: 'cover-image', format: 'embedded'},
+      ],
+      isolated: [
+        { field: 'cover-image', format: 'embedded'},
+      ]
+    }
+  })
   .withRelated('fields', [
     factory.addResource('fields', 'slug').withAttributes({
       fieldType: '@cardstack/core-types::string'
@@ -24,8 +35,13 @@ factory.addResource('content-types', 'articles')
       fieldType: '@cardstack/core-types::date',
       editorComponent: 'publish-toggle'
     }),
+    factory.addResource('fields', 'cover-image').withAttributes({
+      fieldType: '@cardstack/core-types::belongs-to',
+    })
+    .withRelated('related-types', [{ type: 'content-types', id: 'cardstack-images' }]),
     factory.addResource('fields', 'author').withAttributes({
-      fieldType: '@cardstack/core-types::belongs-to'
+      fieldType: '@cardstack/core-types::belongs-to',
+      editorComponent: 'field-editors/dropdown-choices-editor'
     })
     .withRelated('related-types', [{ type: 'content-types', id: 'github-users' }]),
     factory.addResource('fields', 'category').withAttributes({
@@ -70,12 +86,14 @@ factory.addResource('grants', 'article-world-read')
     'may-read-fields': true,
   });
 
-factory.addResource('grants', 'article-writers-update')
+  factory.addResource('grants', 'article-writers-update')
   .withRelated('who', [{ type: 'groups', id: 'github-writers' }])
   .withRelated('types', [
     { type: 'content-types', id: 'articles' }
   ])
   .withAttributes({
+    'may-read-resource': true,
+    'may-read-fields': true,
     'may-create-resource': true,
     'may-update-resource': true,
     'may-delete-resource': true,

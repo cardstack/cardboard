@@ -28,6 +28,8 @@
   "devDependencies": {
     "@cardstack/github-auth": "^0.13.52",
     "@cardstack/eslint-config": "^0.13.52",
+    "@cardstack/files": "^0.13.52",
+    "@cardstack/image": "^0.13.52",
     "@cardstack/jsonapi": "^0.13.52",
     "@cardstack/mobiledoc": "^0.13.52",
     "@cardstack/mock-auth": "^0.13.52",

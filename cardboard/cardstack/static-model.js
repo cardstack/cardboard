@@ -93,6 +93,34 @@ factory.addResource('grants')
     mayLogin: true
   });
 
+  factory.addResource('grants', 'cardstack-files-world-write')
+  .withRelated('who', [{ type: 'groups', id: 'everyone' }])
+  .withRelated('types', [
+    { type: 'content-types', id: 'cardstack-files' }
+  ])
+  .withAttributes({
+    'may-read-resource': true,
+    'may-read-fields': true,
+    'may-create-resource': true,
+    'may-write-fields': true
+  });
+
+
+  factory.addResource('grants', 'cardstack-files-writers-create')
+  .withRelated('who', [{ type: 'groups', id: 'github-writers' }])
+  .withRelated('types', [
+    { type: 'content-types', id: 'cardstack-files' },
+    { type: 'content-types', id: 'cardstack-images' }
+  ])
+  .withAttributes({
+    'may-read-resource': true,
+    'may-read-fields': true,
+    'may-write-fields': true,
+    'may-create-resource': true,
+    'may-update-resource': true,
+    'may-delete-resource': true
+  });
+
 factory.addResource('grants')
   .withRelated('who', [{ type: 'fields', id: 'id' }])
   .withRelated('types', [{ type: 'content-types', id: 'github-users' }])
