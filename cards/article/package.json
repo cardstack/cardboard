@@ -26,9 +26,11 @@
     "ember-cli-htmlbars": "^3.0.0"
   },
   "devDependencies": {
+    "@cardstack/github-auth": "^0.13.52",
     "@cardstack/eslint-config": "^0.13.52",
     "@cardstack/jsonapi": "^0.13.52",
     "@cardstack/mobiledoc": "^0.13.52",
+    "@cardstack/mock-auth": "^0.13.52",
     "@cardstack/routing": "^0.13.52",
     "@cardstack/test-support": "^0.13.52",
     "@ember/jquery": "^0.5.2",
