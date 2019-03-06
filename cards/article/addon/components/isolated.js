@@ -1,4 +1,4 @@
-import Component from '@ember/component';
+import ArticleBaseComponent from './article-base';
 import layout from '../templates/isolated';
 
-export default Component.extend({ layout });
+export default ArticleBaseComponent.extend({ layout });

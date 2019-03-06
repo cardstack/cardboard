@@ -2,6 +2,8 @@ const JSONAPIFactory = require('@cardstack/test-support/jsonapi-factory');
 const { readdirSync, existsSync } = require('fs');
 const { join } = require('path');
 const cardDir = join(__dirname, '../../cards');
+const cardboardRouter = require('./router');
+const defaultRouter = require('@cardstack/routing/cardstack/default-router');
 
 module.exports = function () {
   let factory = new JSONAPIFactory();
@@ -66,6 +68,13 @@ module.exports = function () {
         }
       });
   }
+
+  let router = process.env.HUB_ENVIRONMENT === 'test' &&
+    process.env.TEST &&
+    process.env.TEST.includes('cards/') ? defaultRouter : cardboardRouter;
+  factory.addResource('content-types', 'app-cards')
+    .withAttributes({ router });
+  factory.addResource('app-cards', 'cardboard');
 
   factory.addResource('groups', 'github-readers')
   .withAttributes({

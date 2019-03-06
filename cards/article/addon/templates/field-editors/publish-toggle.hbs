@@ -1,0 +1,14 @@
+{{#cs-toggle-switch
+  value=isPublished
+  change=(action "toggleValue")
+  enabled=(not disabled)
+}}
+  Yes
+{{else}}
+  No
+{{/cs-toggle-switch}}
+{{#if (and content.id (not content.isDraft))}}
+  <span class="cs-field-editor-published-date--published-date">
+    {{publishedDate}}
+  </span>
+{{/if}}

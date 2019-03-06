@@ -8,11 +8,13 @@ const scenario = new Fixtures({
   create(factory) {
     let article1 = factory.addResource('articles', 'article-1')
       .withAttributes({
-        title: 'Article 1'
+        title: 'Article 1',
+        slug: 'article1'
       });
     let article2 = factory.addResource('articles', 'article-2')
       .withAttributes({
-        title: 'Article 2'
+        title: 'Article 2',
+        slug: 'article2'
       });
     factory.addResource('boards', '123')
       .withAttributes({

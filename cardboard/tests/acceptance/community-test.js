@@ -5,6 +5,7 @@ import Fixtures from '@cardstack/test-support/fixtures';
 
 const scenario = new Fixtures({
   create(factory) {
+    // factory.addResource('boards', 'community').withAttributes({
     factory.addResource('boards', 'community').withAttributes({
       title: 'Community'
     });
@@ -28,4 +29,6 @@ module('Acceptance | cardboard', function(hooks) {
 
     assert.dom('[data-test-board-isolated-title]').hasText('Community');
   });
+
+  // TODO add embeded article tests
 });

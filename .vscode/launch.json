@@ -47,7 +47,7 @@
       "type": "node",
       "request": "launch",
       "name": "Run Hub for individual card test",
-      "cwd": "${workspaceRoot}/cards/asset-history",
+      "cwd": "${workspaceRoot}/cards/article",
       "program": "${workspaceRoot}/node_modules/@cardstack/hub/bin/cardstack-hub.js",
       "console": "integratedTerminal",
       "args": [
@@ -56,7 +56,7 @@
         "PGPORT": "5432",
         "CARDSTACK_SESSIONS_KEY": "SBgEzGrr5IcpFbRQHQVjfSY/Rt70yXsljfcrl4k99Fw=",
         "PGSEARCH_NAMESPACE": "cardboard_test",
-        "INITIAL_DATA_DIR": "${workspaceRoot}/cards/asset-history/tests/dummy/cardstack",
+        "INITIAL_DATA_DIR": "${workspaceRoot}/cards/article/tests/dummy/cardstack",
         "HUB_ENVIRONMENT": "test",
         "PORT": "3000"
       }

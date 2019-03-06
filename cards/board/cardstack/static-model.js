@@ -1,5 +1,4 @@
 const JSONAPIFactory = require('@cardstack/test-support/jsonapi-factory');
-
 let factory = new JSONAPIFactory();
 factory.addResource('content-types', 'boards')
   .withAttributes({
