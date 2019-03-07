@@ -1,0 +1,1 @@
+export { default } from 'cardboard-common/components/top-header';

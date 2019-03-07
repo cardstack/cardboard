@@ -1,0 +1,26 @@
+:root {
+  --cardboard-white: #fff;
+  --cardboard-black: #000;
+  --cardboard-off-white: #fafafa;
+  --cardboard-highlight-gray: #f8f8f8;
+  --cardboard-light-gray: #f2f2f4;
+  --cardboard-border-gray: #e5e5e9;
+  --cardboard-darker-border-gray: #ccccd5;
+  --cardboard-border-highlight-gray: #7f7f7f;
+  --cardboard-muted-gray: #757575;
+  --cardboard-purple-gray: #9999ab;
+  --cardboard-light-purple: #676680;
+  --cardboard-purple: #343356;
+  --cardboard-highlight-purple: #4d4c6d;
+  --cardboard-dark-purple: #1b1942;
+  --cardboard-deep-purple: #01002c;
+  --cardboard-green: #3aa78f;
+  --cardboard-red: #ff0404;
+  --cardboard-red-failed: #db3d3d;
+
+  --cardboard-gradient: linear-gradient(90deg, #5e8fff 0%, #9b49ff 100%), #7a6fff;
+  --cardboard-bitcoin-gradient: linear-gradient(45deg, #f76b1c 0%, #fad961 100%), #f76b1c;
+  --cardboard-ether-gradient: linear-gradient(45deg, #003bff 0%, #00ccae 100%), #003bff;
+  --cardboard-litecoin-gradient: linear-gradient(45deg, #3023ae 0%, #c86dd7 100%), #3023ae;
+  --cardboard-zcash-gradient: linear-gradient(45deg, #8022ae 0%, #ff0000 100%), #8022ae;
+}

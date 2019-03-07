@@ -1,0 +1,105 @@
+.cardboard-top-header {
+  --header-wrapper-max-width: 1440px;
+
+  width: 100%;
+  padding: 10px 30px;
+  background-color: var(--cardboard-purple);
+  color: var(--cardboard-white);
+}
+
+.cardboard-top-header__wrapper {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--header-wrapper-max-width);
+  margin: 0 auto;
+  /* padding to prevent overlap with edges launcher icon */
+  padding-right: 50px;
+}
+
+.cardboard-top-header__home {
+  color: var(--cardboard-white);
+  text-decoration: none;
+}
+.cardboard-top-header__home:focus {
+  outline-color: var(--cardboard-light-purple);
+}
+
+.cardboard-top-header__title {
+  margin: 0;
+  padding: 5px;
+  font-weight: 700;
+  font-family: var(--cardboard-bold-text);
+  font-size: var(--cardboard-sm-font);
+  letter-spacing: 0.3px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+.cardboard-top-header__title > svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.cardboard-top-header__title > span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.cardboard-top-header__user {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 700;
+  font-family: var(--cardboard-bold-text);
+  font-size: var(--cardboard-sm-font);
+  letter-spacing: 0.2px;
+  line-height: 1.5;
+}
+.cardboard-top-header__user:hover,
+.cardboard-top-header__user:focus {
+  outline-color: var(--cardboard-light-purple);
+  color: var(--cardboard-white);
+  cursor: pointer;
+  user-select: none;
+  filter: brightness(120%);
+}
+
+.cardboard-top-header__user-name {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cardboard-top-header__user-avatar {
+  width: 33px;
+  height: 33px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cardboard-top-header__user-avatar--default {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35px;
+  color: var(--cardboard-purple-gray);
+  background-color: var(--cardboard-light-gray);
+  font-weight: 700;
+  font-family: var(--cardboard-bold-text);
+  line-height: 1;
+  text-transform: uppercase;
+}
+.cardboard-top-header__user-avatar--default > svg {
+  fill: var(--cardboard-light-purple);
+}

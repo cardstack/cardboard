@@ -50,5 +50,6 @@ module('Card | board', function(hooks) {
     assert.dom('[data-test-board-isolated-title]').hasText('Hello');
     assert.dom('[data-test-board-isolated-article="0"]').exists();
     assert.dom('[data-test-board-isolated-article="1"]').exists();
+    assert.dom('[data-test-cardboard-top-header]').exists();
   });
 });

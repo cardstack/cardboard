@@ -21,6 +21,7 @@
   "dependencies": {
     "@cardstack/rendering": "^0.13.53",
     "babel-preset-env": "^1.7.0",
+    "cardboard-common": "*",
     "cardboard-article": "*",
     "ember-auto-import": "^1.2.10",
     "ember-cli-babel": "^6.6.0",
