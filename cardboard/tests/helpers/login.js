@@ -1,15 +1,21 @@
-import { click, fillIn, waitFor, visit } from '@ember/test-helpers';
+import { click, waitFor, visit } from '@ember/test-helpers';
+import { getContext } from '@ember/test-helpers';
+import { run } from '@ember/runloop';
 
-async function login(email, password) {
-  await visit('/');
-
-  await fillIn('[data-test-login-email]', email)
-  await fillIn('[data-test-login-password]', password);
-  await click('[data-test-login-button]');
-
-  await visit('/profile');
-  await waitFor('[data-test-signout-button]');
+function setMockUser(userId) {
+  let { owner } = getContext();
+  let mockLogin = owner.lookup('service:mock-login');
+  run(() => mockLogin.set('mockUserId', userId));
 }
 
-export { login }
+async function login(userId) {
+  setMockUser(userId);
+  await visit('/');
+  await click('[data-test-signin-button]');
+  await waitFor('[data-test-signout-button');
+}
 
+export {
+  setMockUser,
+  login
+}

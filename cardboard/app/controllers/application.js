@@ -1,11 +1,9 @@
-import Component from '@ember/component';
+import Controller from '@ember/controller';
 import { inject as service } from '@ember/service';
 import { getOwner } from '@ember/application';
 import injectOptional from 'ember-inject-optional';
-import layout from '../templates/top-header';
 
-export default Component.extend({
-  layout,
+export default Controller.extend({
   session: injectOptional.service(),
   router: service(),
 

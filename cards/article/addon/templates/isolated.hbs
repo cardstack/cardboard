@@ -1,4 +1,8 @@
-<div class="article-isolated">
+<div class="article-isolated {{content.theme.id}}">
+  {{!-- I'm adding this cs-field component in the template just so that the field can appear in the right edge.
+        Ideally we shouldn't have to do that. filed as https://github.com/cardstack/cardstack/issues/685 --}}
+  {{#cs-field content "theme"}}{{/cs-field}}
+  
   <div class="article-isolated--cover-image">{{cs-field content "coverImage"}}</div>
   <h1 data-test-article-isolated-title>{{content.title}}</h1>
   <div data-test-article-isolated-body>

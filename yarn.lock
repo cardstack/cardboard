@@ -713,14 +713,14 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@cardstack/authentication@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/authentication/-/authentication-0.13.53.tgz#465d4359c98347e43efc5ef26ef36bd21a2fd235"
-  integrity sha512-M1W0yGmfTHlbgrGeHKouxFWdhLtS02Uxoy4fRowiweD0mn9ltLMhsaDjRuXFtUDrH9plgvcB98Q0zhxAGhzg3A==
+"@cardstack/authentication@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/authentication/-/authentication-0.13.54.tgz#e8b8ba302551946d766da1452e87594b984b2d4a"
+  integrity sha512-AIBrMwaxNG9mqi++teIUBylmJm63IuHM4MJdplHVDDT7q1uxPg7kPSzdqjA8XbHOPuNtbLZnEIIYPsykncVZgQ==
   dependencies:
-    "@cardstack/di" "0.13.53"
+    "@cardstack/di" "0.13.54"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
     ember-cli-babel "^6.8.2"
     ember-cli-htmlbars "^2.0.1"
     ember-css-url "0.2.0"
@@ -731,24 +731,24 @@
     koa-compose "^3.2.1"
     koa-json-body "^5.3.0"
 
-"@cardstack/codegen@0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/codegen/-/codegen-0.13.53.tgz#449503897a6d850907d9a6536b23509079b3db75"
-  integrity sha512-9IVni+g1m40NmKo2/jMWgIlRGHL8oDbxHA/Fm6J90uiQhFKHZwStwvi67FFtq0NeTup48Cx+plyEKNOsZb5EQg==
+"@cardstack/codegen@0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/codegen/-/codegen-0.13.54.tgz#b8c7fa86849a1ffb9b3070196dd52c79599580a8"
+  integrity sha512-JgLsDbuhpT74LJTQ5I2+iI4h4JEepzmQPg/Y7DuO2dw7HS/SfpFmiVGW1cgl5pshZXUxV3hinDghT+5z8VIvBA==
   dependencies:
-    "@cardstack/di" "0.13.53"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/di" "0.13.54"
+    "@cardstack/plugin-utils" "0.13.54"
     ember-cli-babel "^6.8.2"
     ember-fetch "^6.4.0"
     koa-better-route "^0.1.0"
 
-"@cardstack/core-types@0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/core-types/-/core-types-0.13.53.tgz#642718095ea6fb007bf94a200f5d8daed29f5871"
-  integrity sha512-422tdx0OU1WM0WzFbq1lyhg+C37sIkzutC3rDGyDI3MIGL2o97/fhs4Rutd9wRxDNJHtG0UEiK7rUeC6fIYzLA==
+"@cardstack/core-types@0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/core-types/-/core-types-0.13.54.tgz#2110963072221c01d7922737a1c77b7b82d4e931"
+  integrity sha512-MAfwZGadOheiAULYj5lGHhk3x9/dXkZh8i7XQNfT0SJSPUbzZ3BsfaeKWpsjMnmEp7Ldzr6Hxmy0FHaxE03EHw==
   dependencies:
-    "@cardstack/di" "0.13.53"
-    "@cardstack/edges" "0.13.53"
+    "@cardstack/di" "0.13.54"
+    "@cardstack/edges" "0.13.54"
     ember-cli-babel "^6.8.2"
     ember-cli-htmlbars "^2.0.1"
     ember-cli-postcss "^4.1.1"
@@ -758,62 +758,62 @@
     postcss-cssnext "^2.10.0"
     postcss-import "^9.1.0"
 
-"@cardstack/data@0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/data/-/data-0.13.53.tgz#dff3f6678186f17c2e7ca2ecea4078ac8b4e9627"
-  integrity sha512-uDjyXs0lkFGPLD+iwaUsys4tUTdSES88IZTb3ye5q9ejjoMopajg/iDte1SfK0uXIDpsZtksYHi1mSuQUzJVTg==
+"@cardstack/data@0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/data/-/data-0.13.54.tgz#7ad18085014178b60ab1338542f5f6d129d27a9d"
+  integrity sha512-dWsDkOD0o+vAjhOTCFwRQpv9QOctEQelKVzcmQqyxGB4rLQq6plArTPjMAUg1Q3TMBkSI3AzlM6mbsGVnEyFeA==
   dependencies:
-    "@cardstack/models" "0.13.53"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/models" "0.13.54"
+    "@cardstack/plugin-utils" "0.13.54"
     ember-cli-babel "^6.16.0"
     ember-concurrency "^0.8.27"
     ember-inflector "^3.0.0"
 
-"@cardstack/di@0.13.53", "@cardstack/di@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/di/-/di-0.13.53.tgz#9deac61f5c482075ce6416384fb4d8396d7dadae"
-  integrity sha512-fh4LrR0Tlw/777dnGcvoI/FOU3sfHk9vQhUcXJoBeM0AHzAMnO1ixIphe9wLyJkA7xaLcIcpiqlw1LjdyYlJfQ==
+"@cardstack/di@0.13.54", "@cardstack/di@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/di/-/di-0.13.54.tgz#8d66a6f93ae658f946029f87f6fbb2b5419ec966"
+  integrity sha512-UvhEfs6VIWJYcpSn3fTwxIQpERSaBFwnGeyBWccKhXHpj+tqnRSaTedjUYFGsMKwA2Zb+OAIslqPS3C9DXN6CA==
   dependencies:
     "@glimmer/di" "^0.2.0"
     resolve "^1.3.3"
 
-"@cardstack/edges@0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/edges/-/edges-0.13.53.tgz#315bb4979ed8876740baa3ab27b10b507f15a348"
-  integrity sha512-D5Pl4Xui3Nyg1+lndKteJZgsTh/rI0aliTu/C4NO4Btc7vgn18oEkF9hf6cAxvNron65fORNY6tENFbs0t31Qw==
+"@cardstack/edges@0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/edges/-/edges-0.13.54.tgz#99377eae6cc2b00b0e7d9a6412cd8dffcd0382d9"
+  integrity sha512-1bVV9CPGB5u3QvGOMajwqlQ0akzX3vLeSC798/MYtF6ztUwrgFMJY2461Db3gaJwl6kWDFhinHbeySUk4CiDog==
   dependencies:
     ember-cli-babel "^6.6.0"
     ember-cli-htmlbars "^2.0.1"
     ember-elsewhere "^1.0.3"
     ember-toolbars "^0.5.0"
 
-"@cardstack/ephemeral@0.13.53", "@cardstack/ephemeral@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/ephemeral/-/ephemeral-0.13.53.tgz#f182b3e696e9ad29d9a03285235aaeeb7cbf6ab0"
-  integrity sha512-4TvKekPH6oXQW1cpkpCyTZRsfY3GdbrVknqGM1zLI0vrCsWZ0csRcIcWNLEpyhwILqTIlboyvMw9Z6ry8SmeEw==
+"@cardstack/ephemeral@0.13.54", "@cardstack/ephemeral@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/ephemeral/-/ephemeral-0.13.54.tgz#fac717d3ac5a2604f73404b7605c752a699e881d"
+  integrity sha512-vE7KcGd+BZEqodpoxo5xl24Q3gfumY3hrbS3X33nxSnrrG4x5JF85tm87XLUsuF7nAecRERQXMJVFMu993J8ow==
   dependencies:
-    "@cardstack/di" "0.13.53"
+    "@cardstack/di" "0.13.54"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
     lodash "^4.17.11"
     stream-to-promise "2.2.0"
 
-"@cardstack/eslint-config@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/eslint-config/-/eslint-config-0.13.53.tgz#0c1b971cae77f664738e6fc0d4b376f9566d5f47"
-  integrity sha512-KvMwSRRHM4bPmmNCFTm8r/rVb9VDd3hl8vN8QANpkxuEv8e1JlhGob7e1pLx353epwfDiwQGVGbZwVMztr8YTA==
+"@cardstack/eslint-config@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/eslint-config/-/eslint-config-0.13.54.tgz#c3e450d9f05cc9365b45aa40b213005974c84b1f"
+  integrity sha512-omC+F9+Ob+oUG/YyFHXol4fjBR21Ug0YJBxQpEltc24LsvzbWumVO9phopAkaOXZjpVdTHQ5oAKOXs27LT03qA==
 
-"@cardstack/files@0.13.53", "@cardstack/files@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/files/-/files-0.13.53.tgz#c0f95641a25555df88a0b87b82175ca472fa1db3"
-  integrity sha512-EzBCPheK6kzJKbcVKxdU4aZek7uUmAi9JE1VIc+QqHpCIYVsr65w3ep2EyOB5oay/Dy5Yjf+KM4FJ4613cPYBA==
+"@cardstack/files@0.13.54", "@cardstack/files@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/files/-/files-0.13.54.tgz#46abeedd4f804340ceaad60c33671b0faef27b64"
+  integrity sha512-pt3rcpgVRa7pADok8XUYFt8SJS5CrWeCkiphIWDORg4QbPQpphWHDcyJhBTD3EmEHZODgBq2tEG6pfISUZwCmg==
   dependencies:
-    "@cardstack/di" "0.13.53"
-    "@cardstack/hub" "0.13.53"
-    "@cardstack/jsonapi" "0.13.53"
+    "@cardstack/di" "0.13.54"
+    "@cardstack/hub" "0.13.54"
+    "@cardstack/jsonapi" "0.13.54"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/plugin-utils" "0.13.53"
-    "@cardstack/test-support" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
+    "@cardstack/test-support" "0.13.54"
     ember-cli-babel "^6.6.0"
     lodash "^4.17.11"
     moment "^2.22.2"
@@ -822,14 +822,14 @@
     supertest "^3.3.0"
     uuid "^3.3.2"
 
-"@cardstack/git@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/git/-/git-0.13.53.tgz#30324d4d342c2166ee82bcc3a3c652f49690f03c"
-  integrity sha512-iVjSl6pVnBfa8jkq/51XZt2txFRHIzxn/hrZSQJVPIfDknJUg5Y6MP7k1LzDCzq2x3W0e3R9czPHqgdhJKzvPg==
+"@cardstack/git@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/git/-/git-0.13.54.tgz#834806fd53cfa89b9ab60f3333abb93faed49282"
+  integrity sha512-vVQXe8qhNlCbVhi6faCHHz/s3eKgGuQR4MXBgG8qhDIldqXRbcAN3FYpbF3uFFKodmKJNqV40je8WY3WWkMN8g==
   dependencies:
     "@cardstack/gitchain" "0.1.1"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
     delay "^4.1.0"
     filenamify-url "^1.0.0"
     mkdirp "^0.5.1"
@@ -862,14 +862,14 @@
     sawtooth-sdk "^1.0.5"
     tmp "^0.0.33"
 
-"@cardstack/github-auth@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/github-auth/-/github-auth-0.13.53.tgz#4bc8dc30bb34e0858f92e2eb109d7edc244d0ee4"
-  integrity sha512-afNajkHET2GKf2OvEpQSRxg24uZ5WhKP2JYd+Ny0FygKzIRaK2q4ojiq6+mmq5fiOKyWEgtcLWJAxWod1T10bg==
+"@cardstack/github-auth@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/github-auth/-/github-auth-0.13.54.tgz#c5113db47fd96b8a3e291b533519df94df6f80db"
+  integrity sha512-SmugtoGMI82zNzkDZzqfUQapsVGpx7RIJGE9eb81RVOCKade6quKCSRYQ7uwyMsraiglZa1+Pg2ZoII1LXWPYQ==
   dependencies:
-    "@cardstack/di" "0.13.53"
+    "@cardstack/di" "0.13.54"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
     ember-cli-babel "^6.8.2"
     ember-cli-htmlbars "^2.0.1"
     ember-concurrency "^0.8.27"
@@ -877,27 +877,27 @@
     lodash "^4.17.11"
     torii "https://github.com/ef4/torii#925ea3149cc9e35b77e39450cd634c65200768ce"
 
-"@cardstack/handlebars@0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/handlebars/-/handlebars-0.13.53.tgz#706fee47e141cdb186c7128b2100410608018c12"
-  integrity sha512-bP3WVVQSlpoeTJaA5WCLsdf2wZSRQJo5f+zhAiu7K/GxCr7XAtTtqI5wT92WOcVGggaW1h0yslbnakts3gDzEg==
+"@cardstack/handlebars@0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/handlebars/-/handlebars-0.13.54.tgz#7ece7afbd801ca0e6525adf147351c05df68b05f"
+  integrity sha512-Jr+APGICvrhdxw4NvtcxzmtvKBtVqGd3GeaRDJ5gaPTqhPvtrj0KACNsfDzuSykppA7b/Mqo77X11wgab1vfUw==
   dependencies:
     handlebars "^4.0.6"
 
-"@cardstack/hub@0.13.53", "@cardstack/hub@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/hub/-/hub-0.13.53.tgz#407cf4664c6034ef33e8a0ea595658e3df40672d"
-  integrity sha512-zsXeKKcjGifndC1kXRWfzrP2nuCOBXU9VkbF/MenIu1XOds7tlJxLtsWd2WG6sYd4g8cpP23agJOcT69gLiruQ==
+"@cardstack/hub@0.13.54", "@cardstack/hub@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/hub/-/hub-0.13.54.tgz#0053a11fc591334cb5dcb2223e64a096486e7280"
+  integrity sha512-dPe8RP4Qma/PC8Vg5Uuy67P6PiGn/JvPcqTIVOApRHVTve5qReu033VLiFCBrWw+24vFrcQ5weDQmQOgAF8UNA==
   dependencies:
-    "@cardstack/codegen" "0.13.53"
-    "@cardstack/core-types" "0.13.53"
-    "@cardstack/di" "0.13.53"
-    "@cardstack/handlebars" "0.13.53"
+    "@cardstack/codegen" "0.13.54"
+    "@cardstack/core-types" "0.13.54"
+    "@cardstack/di" "0.13.54"
+    "@cardstack/handlebars" "0.13.54"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/pgsearch" "0.13.53"
-    "@cardstack/plugin-utils" "0.13.53"
-    "@cardstack/queue" "0.13.53"
-    "@cardstack/routing" "0.13.53"
+    "@cardstack/pgsearch" "0.13.54"
+    "@cardstack/plugin-utils" "0.13.54"
+    "@cardstack/queue" "0.13.54"
+    "@cardstack/routing" "0.13.54"
     broccoli-concat "^3.2.2"
     broccoli-plugin "^1.3.0"
     broccoli-source "^1.1.0"
@@ -920,24 +920,24 @@
     tar-fs "^1.16.0"
     tar-stream "^1.5.4"
 
-"@cardstack/image@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/image/-/image-0.13.53.tgz#69c9d79245dc2369179839fbe297fc28323d3220"
-  integrity sha512-4iaAaZnTZPlZBEisSZPbYI1R07lEGIQb2096ZN0d4cfZTJf8YGVyxzBwVaTZ0bY3C59He+ufyk2d0ViBAOf3GQ==
+"@cardstack/image@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/image/-/image-0.13.54.tgz#a1e3c42e0ee76c807782f0689cb484ade1bd3a90"
+  integrity sha512-EIzgqcRl2YdnKnvJ3E5yKe4T7+ZiZj1zP6bJPyMMe2rglszM4NUmwNUCD6bycQS0MFGVA+wyk8nZzU4cLvNBDg==
   dependencies:
-    "@cardstack/plugin-utils" "0.13.53"
-    "@cardstack/test-support" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
+    "@cardstack/test-support" "0.13.54"
     ember-cli-babel "^6.8.2"
     ember-cli-htmlbars "^2.0.1"
 
-"@cardstack/jsonapi@0.13.53", "@cardstack/jsonapi@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/jsonapi/-/jsonapi-0.13.53.tgz#ee5c961b2feab7613dd9ed49bbef6bd2b4031ab1"
-  integrity sha512-KlZugdTLdC/S7PyGwxLIOg6NuNDSPurceRQ3MLz6ofZCBLdPvpyNyVG5CoT30zSwiU5crQW0yVK0nXexIPB8iQ==
+"@cardstack/jsonapi@0.13.54", "@cardstack/jsonapi@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/jsonapi/-/jsonapi-0.13.54.tgz#063262ee650c4556199587dfc72ee34131a4f754"
+  integrity sha512-ezCxKJArIprNAm7tAwzNJpjHo3mRbMBGbxUVKxJ7TwJdlziFvzn7L5FEd0drrEDqlc+UVOXav5/5h+1ZtlaA9w==
   dependencies:
-    "@cardstack/di" "0.13.53"
+    "@cardstack/di" "0.13.54"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
     async-busboy "^0.7.0"
     koa-json-body "^5.3.0"
     lodash "^4.17.11"
@@ -951,10 +951,10 @@
   dependencies:
     ms "2.0.0"
 
-"@cardstack/mobiledoc@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/mobiledoc/-/mobiledoc-0.13.53.tgz#abecc695eea2a640901db73075cc71dabe82c59a"
-  integrity sha512-HM2ug5E8a6EeRLhFwRxtx78whn3sPL0ebNPtjjdgrKuci5X/05Qi7ayrVun9B4gWvBaoNxhdnuw6m3s9QuTwxA==
+"@cardstack/mobiledoc@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/mobiledoc/-/mobiledoc-0.13.54.tgz#14900ea5e93c63d6742842e6a69e1e66af5a085a"
+  integrity sha512-agjwLms2dDMR/YvAkVUJRrR22cNSjczjv1L57rRBeUiO1O4YeF80gPuyJpjpx4/7ujFRF6O0eGEHh0dmcV7rbQ==
   dependencies:
     ember-cli-babel "^6.8.2"
     ember-cli-htmlbars "^2.0.1"
@@ -964,26 +964,26 @@
     ember-mobiledoc-editor backspace/ember-mobiledoc-editor#closure-actions
     mobiledoc-text-renderer "^0.3.2"
 
-"@cardstack/mock-auth@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/mock-auth/-/mock-auth-0.13.53.tgz#038dbbfb055ff0855bd67572d4f3927dffce28b4"
-  integrity sha512-AjjnKWksO8b3ocieTmt/V4ENIj5mZWUmH+/mN4ApukoG8vUtqBgVBcZel6cPQ44rwdUSon53KFkjpjBBxJXqlg==
+"@cardstack/mock-auth@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/mock-auth/-/mock-auth-0.13.54.tgz#49cbe64e7b916d9097d73ae289161e2e04971436"
+  integrity sha512-3AHrfPv4Ilb5FJCcONVt1jhCmqcP11kRzhHG++BOVepyIe1mOrDDyy6Z4Na32vPocCpmSSHhTdrQN2mfwoWvRA==
   dependencies:
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
     ember-cli-babel "^6.8.2"
     ember-cli-htmlbars "^2.0.1"
     ember-concurrency "^0.8.27"
     lodash "^4.17.11"
 
-"@cardstack/models@0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/models/-/models-0.13.53.tgz#63e1523c46e38e6cca77029981b260b464ae8851"
-  integrity sha512-NIQ6zSpslyVg1MnvfSOF+FLCIeUy6TeX4knoBgC6oWrRV7juWD/98AAymd87t4HtptSGtkBXu0IKP6P3NegY0A==
+"@cardstack/models@0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/models/-/models-0.13.54.tgz#e7dc19613b646aeda8dd005faf074e251aa6e8b9"
+  integrity sha512-KPEv8iMphkpuwPg3z+TYLXHCB5VebfYzMMpBllXNgBZvpOvnGrkYwm/B3RNsWuBKf6YYjJaOQPaMUopZJ2Yp2g==
   dependencies:
-    "@cardstack/codegen" "0.13.53"
-    "@cardstack/di" "0.13.53"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/codegen" "0.13.54"
+    "@cardstack/di" "0.13.54"
+    "@cardstack/plugin-utils" "0.13.54"
     ember-auto-import "^1.2.16"
     ember-cli-babel "^6.8.2"
     ember-data-relationship-tracker "^0.3.2"
@@ -993,25 +993,25 @@
     inflection "^1.12.0"
     lodash-es "^4.17.11"
 
-"@cardstack/pgsearch@0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/pgsearch/-/pgsearch-0.13.53.tgz#a17822a78b7a05a9d8a53d56b10fbb392c719cfe"
-  integrity sha512-LyBT7R/b6PKlxu/JG9hN2kSpqA9yXgckOcLe3y1kYu/itNAzDsMkUzj7hRnvbC6FQZF91WduDEZAXIAp0LmcKQ==
+"@cardstack/pgsearch@0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/pgsearch/-/pgsearch-0.13.54.tgz#4a26c6eed0ec1e6904c0845c127b0e719d23115d"
+  integrity sha512-aJhoDSdbnkkgi2KuQsqqUQA28VNu2sjgZ2ME2meFFqW7xA88SvntYQT07ZZAUC0Q45VASBRxP6Y12basgzh7mA==
   dependencies:
-    "@cardstack/di" "0.13.53"
-    "@cardstack/hub" "0.13.53"
+    "@cardstack/di" "0.13.54"
+    "@cardstack/hub" "0.13.54"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
     node-pg-migrate "3.5.0"
     pg "^7.0.3"
     pg-cursor "^1.3.0"
 
-"@cardstack/plugin-utils@0.13.53", "@cardstack/plugin-utils@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/plugin-utils/-/plugin-utils-0.13.53.tgz#8bb4eb8b8cc006e6a692488ed37ad031613d85c2"
-  integrity sha512-REpnl5otT38aBPOz13PTBw5y8fLH06mMwoeaoHbaRKtImkFv+cmQdY3hCnBcrbI/JRIGhfQvXxVT7wFc8jHG8w==
+"@cardstack/plugin-utils@0.13.54", "@cardstack/plugin-utils@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/plugin-utils/-/plugin-utils-0.13.54.tgz#6ba13f6c8fcec5a5b5795167485bcb37ab9c90a7"
+  integrity sha512-53hLG/cU1bSJE8MK5gKSdpVkkxfkw41f8am/uPP0kEiHRYTkEWocPkDcx8EVdp6JSMDkjSpCWL7ikiJb1Sf9KA==
   dependencies:
-    "@cardstack/di" "0.13.53"
+    "@cardstack/di" "0.13.54"
     broccoli-plugin "^1.3.0"
     ember-cli-babel "^6.8.2"
     handlebars "^4.0.6"
@@ -1020,21 +1020,21 @@
     superagent "^3.8.1"
     symlink-or-copy "^1.1.8"
 
-"@cardstack/queue@0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/queue/-/queue-0.13.53.tgz#91a2644181bf3c8fce3b7903a965b056767c0cdd"
-  integrity sha512-9wX9v9Or7AavyLlKLtMsbH6UaFxSpcuCfdjXRKQK9glRWD5lAQytGbzp6W8fpSslASVv/14v5d/hTUBi7cNNZg==
+"@cardstack/queue@0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/queue/-/queue-0.13.54.tgz#cd3df0cea2d32c20ab1c77425ae005322fddad6c"
+  integrity sha512-IIni0BaPch2eMA+DovAL/NGRQWi8tJkIve0Joa2zGtKKhWySKeTYvJDoG3nGNZ7hpT4z0PfrJ0M3icQkqctYjQ==
   dependencies:
-    "@cardstack/di" "0.13.53"
+    "@cardstack/di" "0.13.54"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
     pg "^7.0.3"
     pg-boss "^2.5.1"
 
-"@cardstack/rendering@0.13.53", "@cardstack/rendering@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/rendering/-/rendering-0.13.53.tgz#456ce9c547a695f4620ec15f98cc23f38ef67832"
-  integrity sha512-bx/2tBXuETqR/vA4jcEEgJNwoMnu122zWbq/YLYeaErvRGxwWf6rS6XiIrf0+qzYfujLRs5VV3DRr59mTDFfrA==
+"@cardstack/rendering@0.13.54", "@cardstack/rendering@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/rendering/-/rendering-0.13.54.tgz#eb895a973837b1accbc275252e430a8e30a8459d"
+  integrity sha512-Ke2R2c699G1FkqKtDQdJmhxHEJ7lWc/yyedzhQgsXN2JgNoj3orTUwg1okGYSGqyxI8eTC6r/oBtWXp3gwqXLw==
   dependencies:
     ember-cli-babel "^6.8.2"
     ember-cli-htmlbars "^2.0.1"
@@ -1043,15 +1043,15 @@
     ember-overlays "^1.0.2"
     ember-truth-helpers "^2.0.0"
 
-"@cardstack/routing@0.13.53", "@cardstack/routing@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/routing/-/routing-0.13.53.tgz#472d517080300bea9ea327289016caad2481b232"
-  integrity sha512-rfkF2GB/Jo/lXqIPYM3JbJc2gz0ZQNmqQjikzvPg/s7XHrErq23WQ0Dcx6QRrKcSI+5x5hZ74yLWuNl2LLvlsQ==
+"@cardstack/routing@0.13.54", "@cardstack/routing@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/routing/-/routing-0.13.54.tgz#5eb9aecccf897e3ade0b2c5d48c194ddb43065a6"
+  integrity sha512-qLWrqulFaFS2fEes6z51wAfKSV5BWLC5iK7riuOXKBMVVHKizn81XTVCDWWyHoxj9cgDNYiKmPblHL6j212qPA==
   dependencies:
-    "@cardstack/di" "0.13.53"
-    "@cardstack/edges" "0.13.53"
-    "@cardstack/plugin-utils" "0.13.53"
-    "@cardstack/rendering" "0.13.53"
+    "@cardstack/di" "0.13.54"
+    "@cardstack/edges" "0.13.54"
+    "@cardstack/plugin-utils" "0.13.54"
+    "@cardstack/rendering" "0.13.54"
     ember-auto-import "^1.2.15"
     ember-cli-babel "^6.16.0"
     ember-cli-head "^0.4.1"
@@ -1062,18 +1062,18 @@
     lodash "^4.17.11"
     qs "^6.6.0"
 
-"@cardstack/s3@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/s3/-/s3-0.13.53.tgz#fe62fe8fec243ec486ba1d1db0ef0b94a34c4ea4"
-  integrity sha512-83XpeYPODeqkOA7KqnJ1zq6Fs4wN8AfQautb7HJTlMQ0vJK6A8gnTVfMVuv4XurJ3BQ9q7tjlMSrQecoGlKYmQ==
+"@cardstack/s3@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/s3/-/s3-0.13.54.tgz#6098d87b75837c0991718057cebad240dae88ce3"
+  integrity sha512-mQNOsZ5xUEMRnLH0PoSc+okDWkiVq5R10cYi5p/zhmjQf5jjFNxwA/wg2AJaxacqq3mGn2ZNqP/Nrz6Eua/k5w==
   dependencies:
-    "@cardstack/di" "0.13.53"
-    "@cardstack/files" "0.13.53"
-    "@cardstack/hub" "0.13.53"
-    "@cardstack/jsonapi" "0.13.53"
+    "@cardstack/di" "0.13.54"
+    "@cardstack/files" "0.13.54"
+    "@cardstack/hub" "0.13.54"
+    "@cardstack/jsonapi" "0.13.54"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/plugin-utils" "0.13.53"
-    "@cardstack/test-support" "0.13.53"
+    "@cardstack/plugin-utils" "0.13.54"
+    "@cardstack/test-support" "0.13.54"
     aws-sdk "^2.317.0"
     ember-cli-babel "^6.6.0"
     koa "^2.5.3"
@@ -1085,18 +1085,18 @@
     supertest "^3.3.0"
     uuid "^3.3.2"
 
-"@cardstack/test-support@0.13.53", "@cardstack/test-support@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/test-support/-/test-support-0.13.53.tgz#b0a455216bb7cd080ebcaefa54374abfcdbfe69c"
-  integrity sha512-10SfqvXXQH8A5uT134UtYaYj7aB0Ag++JxxyvXc16QTG1l7BPK9pXvbLHxM8ko2IZbQibvc8qL351/wnaY4m/w==
+"@cardstack/test-support@0.13.54", "@cardstack/test-support@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/test-support/-/test-support-0.13.54.tgz#17fe162a6cb45cf881a51835c5cf0fe715999852"
+  integrity sha512-EBJKMkkFHkHsP3s5xnzv2x6iWSQOS0a1ZL8eGsWYUJYQti0/i79Lu4sESuo/H+Q06dihYUsae/DCSyznli6Uiw==
   dependencies:
-    "@cardstack/data" "0.13.53"
-    "@cardstack/di" "0.13.53"
-    "@cardstack/ephemeral" "0.13.53"
-    "@cardstack/hub" "0.13.53"
+    "@cardstack/data" "0.13.54"
+    "@cardstack/di" "0.13.54"
+    "@cardstack/ephemeral" "0.13.54"
+    "@cardstack/hub" "0.13.54"
     "@cardstack/logger" "^0.1.0"
-    "@cardstack/pgsearch" "0.13.53"
-    "@cardstack/plugin-utils" "0.13.53"
+    "@cardstack/pgsearch" "0.13.54"
+    "@cardstack/plugin-utils" "0.13.54"
     "@std/esm" "^0.25.1"
     broccoli-funnel "^2.0.1"
     chai "^3.5.0"
@@ -1117,15 +1117,15 @@
     resolve "^1.3.3"
     temp "^0.8.3"
 
-"@cardstack/tools@^0.13.53":
-  version "0.13.53"
-  resolved "https://registry.yarnpkg.com/@cardstack/tools/-/tools-0.13.53.tgz#b978425f8fe4514b323d6bd54c6e0c69462f848a"
-  integrity sha512-OX+tnHXjTAmaxlQm65eCzXuD7eN6cFuNhKGUeKsH+gA5Dz5vGlbxEwFzmNI2UOROlcs99xKMgJafhcizijUE1Q==
+"@cardstack/tools@^0.13.54":
+  version "0.13.54"
+  resolved "https://registry.yarnpkg.com/@cardstack/tools/-/tools-0.13.54.tgz#c17a0ca32fb28c627a544dafb5e53013102b15d6"
+  integrity sha512-4QLH94eiJuxDaeismtYJKh+ha3m8ARixCx+Y9vRcOg+zQS7VZOZ7rzajHBgDGesTUfiXsax1gQOeKYVPgCc7pA==
   dependencies:
-    "@cardstack/data" "0.13.53"
-    "@cardstack/edges" "0.13.53"
-    "@cardstack/plugin-utils" "0.13.53"
-    "@cardstack/rendering" "0.13.53"
+    "@cardstack/data" "0.13.54"
+    "@cardstack/edges" "0.13.54"
+    "@cardstack/plugin-utils" "0.13.54"
+    "@cardstack/rendering" "0.13.54"
     ember-cli-babel "^6.16.0"
     ember-cli-htmlbars "^2.0.1"
     ember-cli-is-component "^0.5.0"
@@ -5466,7 +5466,7 @@ ember-cli-babel-plugin-helpers@^1.0.0:
   resolved "https://registry.yarnpkg.com/ember-cli-babel-plugin-helpers/-/ember-cli-babel-plugin-helpers-1.0.2.tgz#d4bec0f32febc530e621ea8d66d3365727cb5e6c"
   integrity sha512-tTWmHiIvadgtu0i+Zlb5Jnue69qO6dtACcddkRhhV+m9NfAr+2XNoTKRSeGL8QyRDhfWeo4rsK9dqPrU4PQ+8g==
 
-ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.10.0, ember-cli-babel@^6.11.0, ember-cli-babel@^6.16.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.7.2, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2, ember-cli-babel@^6.9.0:
+ember-cli-babel@^6.0.0, ember-cli-babel@^6.0.0-beta.4, ember-cli-babel@^6.10.0, ember-cli-babel@^6.11.0, ember-cli-babel@^6.16.0, ember-cli-babel@^6.3.0, ember-cli-babel@^6.6.0, ember-cli-babel@^6.7.2, ember-cli-babel@^6.8.1, ember-cli-babel@^6.8.2, ember-cli-babel@^6.9.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/ember-cli-babel/-/ember-cli-babel-6.18.0.tgz#3f6435fd275172edeff2b634ee7b29ce74318957"
   integrity sha512-7ceC8joNYxY2wES16iIBlbPSxwKDBhYwC8drU3ZEvuPDMwVv1KzxCNu1fvxyFEBWhwaRNTUxSCsEVoTd9nosGA==
@@ -6436,6 +6436,13 @@ ember-href-to@^1.13.0:
     ember-cli-babel "^6.8.2"
     ember-router-service-polyfill "^1.0.2"
 
+ember-inflector@^2.1.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/ember-inflector/-/ember-inflector-2.3.0.tgz#94797eba0eea98d902aa1e5da0f0aeef6053317f"
+  integrity sha1-lHl+ug7qmNkCqh5doPCu72BTMX8=
+  dependencies:
+    ember-cli-babel "^6.0.0"
+
 ember-inflector@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/ember-inflector/-/ember-inflector-3.0.0.tgz#7e1ee8aaa0fa773ba0905d8b7c0786354d890ee1"
@@ -6584,7 +6591,7 @@ ember-resource-metadata@habdelra/ember-resource-metadata#a1eaf9d1be6fe23aab45211
   resolved "https://codeload.github.com/habdelra/ember-resource-metadata/tar.gz/a1eaf9d1be6fe23aab45211e2b80939263016229"
   dependencies:
     ember-cli-babel "^6.8.2"
-    ember-inflector "^3.0.0"
+    ember-inflector "^2.1.0"
 
 ember-rfc176-data@^0.3.5, ember-rfc176-data@^0.3.6:
   version "0.3.6"
@@ -10894,7 +10901,7 @@ moment@^2.17.1, moment@^2.18.0, moment@^2.19.3:
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
   integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
 
-moment@^2.22.2:
+moment@^2.22.2, moment@^2.24.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.24.0.tgz#0d055d53f5052aa653c9f6eb68bb5d12bf5c2b5b"
   integrity sha512-bV7f+6l2QigeBBZSM/6yTNq4P2fNpSWj/0e7jQcy87A8e7o2nAfP/34/2ky5Vw4B9S446EtIhodAzkFCcR4dQg==

@@ -1,10 +1,11 @@
-import { module, test } from 'qunit';
+import { module, test, skip } from 'qunit';
 import { visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import Fixtures from '@cardstack/test-support/fixtures';
 
 const scenario = new Fixtures({
   create(factory) {
+    // factory.addResource('boards', 'community').withAttributes({
     factory.addResource('boards', 'community').withAttributes({
       title: 'Community'
     });
@@ -27,5 +28,9 @@ module('Acceptance | cardboard', function(hooks) {
     assert.equal(currentURL(), '/');
 
     assert.dom('[data-test-board-isolated-title]').hasText('Community');
+  });
+
+  skip('TODO emedded article renders', async function(/*assert*/) {
+    // add the tests that needed to be removed from the integration tests due to the need for articles components to leverage session
   });
 });
