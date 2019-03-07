@@ -1,0 +1,27 @@
+<header class="cardboard-top-header" data-test-cardboard-top-header>
+  <div class="cardboard-top-header__wrapper">
+    <a href="/" class="cardboard-top-header__home">
+      <h1 class="cardboard-top-header__title">
+        {{svg-jar "cardstack-logo-color" width="30px" height="30px"}} <span>Cardstack Community</span>
+      </h1>
+    </a>
+    {{#if (is-component "cardstack-session")}}
+      {{#login-button as |session login|}}
+        {{#if session.isAuthenticated }}
+          <button {{action session.logout}} class="cardboard-top-header__user" data-test-cardboard-top-header-user data-test-signout-button>
+            <div class="cardboard-top-header__user-name">{{session.user.name}}</div>
+            {{#if session.user.avatarUrl}}
+              <div style={{css-url "background-image" session.user.avatarUrl}} class="cardboard-top-header__user-avatar" />
+            {{else}}
+              <div class="cardboard-top-header__user-avatar cardboard-top-header__user-avatar--default">
+                {{svg-jar "user-icon" width="18px" height="20px"}}
+              </div>
+            {{/if}}
+          </button>
+        {{else}}
+          <button data-test-signin-button {{action login}}>Sign in with GitHub</button>
+        {{/if}}
+      {{/login-button}}
+    {{/if}}
+  </div>
+</header>

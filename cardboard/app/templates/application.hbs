@@ -1,15 +1,5 @@
 {{#cardstack-edges}}
   {{#squishable-container}}
-    {{!-- TODO move this to the correct place --}}
-    {{#login-button as |session login|}}
-      {{#if session.isAuthenticated }}
-        {{#if session.user.avatarUrl}}<img src={{session.user.avatarUrl}}/>{{/if}}
-        <button data-test-signout-button {{action session.logout}}>Sign out {{session.user.name}}</button>
-      {{else}}
-        <button data-test-signin-button {{action login}}>Sign in with GitHub</button>
-      {{/if}}
-    {{/login-button}}
-
     {{outlet}}
   {{/squishable-container}}
 {{/cardstack-edges}}
