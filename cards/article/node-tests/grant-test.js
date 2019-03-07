@@ -169,7 +169,7 @@ describe('articles - grants', function () {
         await writers.create('master', await createReaderSession(), 'articles', {
           data: {
             type: 'articles',
-            attributes: { title: 'title' },
+            attributes: { title: 'title', slug: 'test' },
             relationships: {
               readers: { data: { type: 'groups', id: 'github-readers'} }
             }
@@ -188,7 +188,7 @@ describe('articles - grants', function () {
         await writers.update('master', await createReaderSession(), type, id, {
           data: {
             type, id,
-            attributes: { title: 'updated title' },
+            attributes: { title: 'updated title', slug: 'test' },
             relationships: {
               readers: { data: { type: 'groups', id: 'github-readers'} }
             },
@@ -205,7 +205,7 @@ describe('articles - grants', function () {
       let { data: { type, id } } = await writers.create('master', await createWriterSession(), 'articles', {
         data: {
           type: 'articles',
-          attributes: { title: 'title' },
+          attributes: { title: 'title', slug: 'test' },
           relationships: {
             readers: { data: { type: 'groups', id: 'github-writers' } }
           },
@@ -220,7 +220,7 @@ describe('articles - grants', function () {
       await writers.update('master', await createWriterSession(), type, id, {
         data: {
           type, id,
-          attributes: { title: 'updated title' },
+          attributes: { title: 'updated title', slug: 'test' },
           relationships: {
             readers: { data: { type: 'groups', id: 'github-writers' } }
           },
