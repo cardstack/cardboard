@@ -8,7 +8,7 @@
     {{#if (is-component "cardstack-session")}}
       {{#login-button as |session login|}}
         {{#if session.isAuthenticated }}
-          <button {{action session.logout}} class="cardboard-top-header__user" data-test-cardboard-top-header-user data-test-signout-button>
+          <button {{action logout}} class="cardboard-top-header__user" data-test-cardboard-top-header-user data-test-signout-button>
             <div class="cardboard-top-header__user-name">{{session.user.name}}</div>
             {{#if session.user.avatarUrl}}
               <div style={{css-url "background-image" session.user.avatarUrl}} class="cardboard-top-header__user-avatar" />
