@@ -1,1 +1,1 @@
-export { default } from 'portfolio-common/components/moving-box';
+export { default } from 'cardboard-common/components/moving-box';

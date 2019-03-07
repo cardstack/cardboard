@@ -12,6 +12,16 @@ let sources = [
         data: { type: 'data-sources', id: 'default' }
       }
     }
+  },
+  {
+    type: 'data-sources',
+    id: '@cardstack/image',
+    attributes: {
+      'source-type': '@cardstack/image',
+      params: {
+        storeImageMetadataIn: { type: 'data-sources', id: 'default' }
+      }
+    }
   }
 ];
 
@@ -29,6 +39,33 @@ if (process.env.HUB_ENVIRONMENT === 'production') {
         }
       }
     }
+  },
+  {
+    type: 'data-sources',
+    id: '@cardstack/s3',
+    attributes: {
+      'source-type': '@cardstack/s3',
+      params: {
+        branches: {
+          master: {
+            access_key_id: process.env.AWS_ACCESS_KEY_ID,
+            secret_access_key: process.env.AWS_SECRET_ACCESS_KEY,
+            bucket: 'cs-images-test',
+            region: 'us-east-1'
+          }
+        }
+      }
+    }
+  },
+  {
+    type: 'data-sources',
+    id: '@cardstack/files',
+    attributes: {
+      'source-type': '@cardstack/files',
+      params: {
+        storeFilesIn: { type: 'data-sources', id: '@cardstack/s3' }
+      }
+    }
   });
 } else {
   sources.push({
@@ -36,6 +73,16 @@ if (process.env.HUB_ENVIRONMENT === 'production') {
     id: 'default',
     attributes: {
       'source-type': '@cardstack/ephemeral'
+    }
+  },
+  {
+    type: 'data-sources',
+    id: '@cardstack/files',
+    attributes: {
+      'source-type': '@cardstack/files',
+      params: {
+        storeFilesIn: { type: 'data-sources', id: 'default' }
+      }
     }
   });
 }

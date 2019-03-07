@@ -53,6 +53,24 @@ describe('articles - grants', function () {
       }
     });
 
+    factory.addResource('data-sources', 'default').withAttributes({
+      sourceType: '@cardstack/ephemeral'
+    });
+
+    factory.addResource('data-sources', '@cardstack/image').withAttributes({
+      sourceType: '@cardstack/image',
+      params: {
+        storeImageMetadataIn: { type: 'data-sources', id: 'default' }
+      }
+    });
+
+    factory.addResource('data-sources', '@cardstack/files').withAttributes({
+      sourceType: '@cardstack/files',
+      params: {
+        storeFilesIn: { type: 'data-sources', id: 'default' }
+      }
+    });
+
     factory.addResource('data-sources', 'mock-auth')
       .withAttributes({
         sourceType: '@cardstack/mock-auth',

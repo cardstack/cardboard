@@ -1,1 +1,1 @@
-export { default } from 'portfolio-common/components/moving-inner-box';
+export { default } from 'cardboard-common/components/moving-inner-box';
