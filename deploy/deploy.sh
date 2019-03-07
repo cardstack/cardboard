@@ -21,6 +21,7 @@ if [ "$TRAVIS_PULL_REQUEST" == 'false' ]; then
                   GITHUB_TOKEN \
                   PUBLIC_HUB_URL \
                   SWARM_CONTROLLER \
+                  S3_IMAGE_BUCKET \
                   LOG_LEVELS \
                   GIT_PRIVATE_KEY \
                   GIT_BRANCH_PREFIX \
