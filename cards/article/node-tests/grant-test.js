@@ -11,6 +11,10 @@ const cardDir = join(__dirname, '../../');
 let factory, env, writers, searchers, sessions;//, githubWriter, githubReader;
 
 async function createArticle(attributes={}, readers='everyone') {
+  if (!attributes.slug) {
+    attributes.slug = 'test';
+  }
+
   let { data: article } = await writers.create('master', env.session, 'articles', {
     data: {
       type: 'articles',
