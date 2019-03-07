@@ -22,6 +22,8 @@ if [ "$TRAVIS_PULL_REQUEST" == 'false' ]; then
                   PUBLIC_HUB_URL \
                   SWARM_CONTROLLER \
                   S3_IMAGE_BUCKET \
+                  S3_IMAGE_UPLOAD_ACCESS_KEY_ID \
+                  S3_IMAGE_UPLOAD_SECRET_ACCESS_KEY \
                   LOG_LEVELS \
                   GIT_PRIVATE_KEY \
                   GIT_BRANCH_PREFIX \
