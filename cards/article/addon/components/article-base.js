@@ -14,8 +14,7 @@ export default Component.extend(SetReadersMixin, SetThemeMixin, {
     if (this.get('content.id')) { return; }
 
     if (!this.get('content.author')) {
-      // TODO need to figure out why setting an author relationship causes node-postgres to hang
-      // this.set('content.author', this.get('cardstackSession.user'));
+      this.set('content.author', this.get('cardstackSession.user'));
     }
     if (!this.get('content.publishedDate')) {
       this.setReaders(defaultReadersGroup);

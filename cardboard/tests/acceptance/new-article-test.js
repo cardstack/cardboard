@@ -105,8 +105,7 @@ module('Acceptance | new article', function(hooks) {
     assert.deepEqual(article.relationships.readers.data, { type: 'groups', id: 'everyone'}, 'the article readers group is set correctly');
   });
 
-  // TODO need to figure out why setting an author relationship causes node-postgres to hang
-  skip('the authors field is set correctly for articles', async function(assert) {
+  test('the authors field is set correctly for articles', async function(assert) {
     await navigateToNewArticle();
     await setSlugField('test');
     await saveArticle();
@@ -183,11 +182,7 @@ module('Acceptance | new article', function(hooks) {
     assert.deepEqual(article.relationships.theme.data, { type: 'themes', id: 'modern'}, 'the default theme is set correctly');
   });
 
-  // test('the slug cannot be empty', async function(assert) {
-  //   await navigateToNewArticle();
-  //   await saveArticle();
-
-  //   assert.dom('.error').hasTextContaining();
-  // });
+  skip('TODO the slug cannot be empty', async function(/*assert*/) {
+  });
 
 });

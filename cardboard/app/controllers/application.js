@@ -7,15 +7,17 @@ export default Controller.extend({
   session: injectOptional.service(),
   router: service(),
 
-  logout() {
-    let session = this.get('session');
-    if (!session) { return; }
+  actions: {
+    logout() {
+      let session = this.get('session');
+      if (!session) { return; }
 
-    session.invalidate();
-    this.router.transitionTo('cardstack.index');
+      session.invalidate();
+      this.router.transitionTo('cardstack.index');
 
-    let routeName = this.router.get('currentRouteName');
-    let currentRoute = getOwner(this).lookup(`route:${routeName}`);
-    currentRoute.refresh();
+      let routeName = this.router.get('currentRouteName');
+      let currentRoute = getOwner(this).lookup(`route:${routeName}`);
+      currentRoute.refresh();
+    }
   }
 });
