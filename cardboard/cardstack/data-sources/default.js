@@ -48,8 +48,8 @@ if (process.env.HUB_ENVIRONMENT === 'production') {
       params: {
         branches: {
           master: {
-            access_key_id: process.env.AWS_ACCESS_KEY_ID,
-            secret_access_key: process.env.AWS_SECRET_ACCESS_KEY,
+            access_key_id: process.env.S3_IMAGE_UPLOAD_ACCESS_KEY_ID,
+            secret_access_key: process.env.S3_IMAGE_UPLOAD_SECRET_ACCESS_KEY,
             bucket: process.env.S3_IMAGE_BUCKET,
             region: 'us-east-1'
           }
