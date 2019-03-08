@@ -1,4 +1,4 @@
-import { module, test, skip } from 'qunit';
+import { module, test } from 'qunit';
 import { click, visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import Fixtures from '@cardstack/test-support/fixtures';
@@ -48,11 +48,7 @@ module('Acceptance | article', function(hooks) {
     assert.dom('[data-test-article-isolated-published-date]').hasAnyText();
     assert.dom('[data-test-article-isolated-category]').hasText(`LOLz`);
     assert.dom('.article-isolated.modern').exists();
-
-    // TODO add cover image assertion
-  });
-
-  skip('TODO add test for cover image when rendering isolated article', async function(/*assert*/) {
+    assert.dom('.article-isolated--cover-image').hasStyle({ 'background-image': 'url("http://localhost:3000/api/cardstack-files/lol-cat.jpg")' });
   });
 
   test('when a published article is unpublished it unsets the published-date field', async function(assert) {

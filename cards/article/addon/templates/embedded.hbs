@@ -1,7 +1,12 @@
 <a class="article-embedded {{content.theme.id}}" href={{cardstack-url content}} >
+  {{#cs-field content "coverImage"}}
+    <div class="article-embedded--cover-image
+               {{if (and cardstackTools.editing (not coverImageBackgroundImageCss)) 'cardstack-image-placeholder'}}"
+               style={{coverImageBackgroundImageCss}}></div>
+  {{/cs-field}}
   <h2 data-test-article-embedded-title>{{content.title}}</h2>
   <p data-test-article-embedded-description>{{content.description}}</p>
-  <div data-test-article-embedded-author>{{content.authorName}}</div>
-  <div data-test-article-embedded-published-date>{{publishedDate}}</div>
-  <div data-test-article-embedded-category>{{content.category.name}}</div>
+  <div>author: <span data-test-article-embedded-author>{{content.authorName}}</span></div>
+  <div>published: <span data-test-article-embedded-published-date>{{publishedDate}}</span></div>
+  <div>category: <span data-test-article-embedded-category>{{content.category.name}}</span></div>
 </a>

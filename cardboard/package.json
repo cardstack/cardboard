@@ -33,7 +33,7 @@
     "@cardstack/git": "^0.13.54",
     "@cardstack/github-auth": "^0.13.54",
     "@cardstack/hub": "^0.13.54",
-    "@cardstack/image": "^0.13.54",
+    "@cardstack/image": "^0.13.55",
     "@cardstack/jsonapi": "^0.13.54",
     "@cardstack/logger": "^0.1.0",
     "@cardstack/mobiledoc": "^0.13.54",

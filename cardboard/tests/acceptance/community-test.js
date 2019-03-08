@@ -1,4 +1,4 @@
-import { module, test, skip } from 'qunit';
+import { module, test } from 'qunit';
 import { visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import { setupTestArticle } from '../helpers/article-utils';
@@ -43,8 +43,6 @@ module('Acceptance | cardboard', function(hooks) {
     assert.dom('[data-test-article-embedded-published-date]').hasAnyText();
     assert.dom('[data-test-article-embedded-category]').hasText(`LOLz`);
     assert.dom('.article-embedded.modern').exists();
-  });
-
-  skip('TODO add test for cover image when rendering embedded article', async function(/*assert*/) {
+    assert.dom('.article-embedded--cover-image').hasStyle({ 'background-image': 'url("http://localhost:3000/api/cardstack-files/lol-cat.jpg")' });
   });
 });

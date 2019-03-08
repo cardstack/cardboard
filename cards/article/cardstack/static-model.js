@@ -28,7 +28,7 @@ factory.addResource('content-types', 'articles')
 
     factory.addResource('fields', 'description').withAttributes({
       fieldType: '@cardstack/core-types::string',
-      editorComponent: 'string-text-area'
+      editorComponent: 'field-editors/string-text-area'
     }),
 
     factory.addResource('fields', 'body').withAttributes({

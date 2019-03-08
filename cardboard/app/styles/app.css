@@ -2,3 +2,11 @@
 body {
   margin: 0;
 }
+
+/* dont show the framework "published" dropdown as its very disconnected from how we are tracking published status, and this is not really fully baked in the framework yet */
+.cs-version-control-dropdown {
+  display: none;
+}
+.cs-active-composition-panel--main.header-expanded {
+  --tools-scrollable-panel-height: 20rem;
+}

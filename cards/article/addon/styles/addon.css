@@ -1,12 +1,11 @@
 @import "article-embedded";
 @import "article-isolated";
 
-/* custom field editor styles */
+/* custom article field editor styles */
 .cs-field-editor-published-date--published-date {
-  margin-left: 1em;
+  margin-left: 1rem;
 }
-
-/* dont show the framework "published" dropdown as its very disconnected from how we are tracking published status, and this is not really fully baked in the framework yet */
-.cs-version-control-dropdown {
-  display: none;
+.field-editor--string-text-area textarea {
+  width: 100%;
+  min-height: 5rem;
 }
