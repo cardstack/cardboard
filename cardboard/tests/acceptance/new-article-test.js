@@ -1,10 +1,10 @@
 import { module, test, skip } from 'qunit';
-import { click, visit, currentURL, waitFor, fillIn } from '@ember/test-helpers';
+import { click, visit, currentURL, fillIn } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import Fixtures from '@cardstack/test-support/fixtures';
-import { login } from '../helpers/login';
-import { ciSessionId } from '@cardstack/test-support/environment';
-import { hubURL } from '@cardstack/plugin-utils/environment';
+import { setupMockUser, login } from '../helpers/login';
+import { saveArticle, findTriggerElementWithLabel } from '../helpers/editor-utils';
+import { getArticles, setupThemes, setupCategories } from '../helpers/article-utils';
 
 async function navigateToNewArticle() {
   await login('github-writer');
@@ -15,15 +15,6 @@ async function navigateToNewArticle() {
   await click(button);
 }
 
-async function saveArticle() {
-  await click('[data-test-cs-version-control-button-save="false"]');
-  await waitFor('[data-test-cs-version-control-button-save="true"]');
-}
-
-function findTriggerElementWithLabel(labelRegex) {
-  return [...document.querySelectorAll('.cs-toolbox-section label')].find(element => labelRegex.test(element.textContent));
-}
-
 async function setSlugField(slug) {
   let element = findTriggerElementWithLabel(/Slug/);
   await click(element);
@@ -31,37 +22,12 @@ async function setSlugField(slug) {
   await fillIn(input, slug);
 }
 
-async function getArticles() {
-  let url = `${hubURL}/api/articles`;
-  let response = await fetch(url, {
-    headers: {
-      authorization: `Bearer ${ciSessionId}`,
-      "content-type": 'application/vnd.api+json'
-    }
-  });
-  return (await response.json()).data;
-}
-
 const scenario = new Fixtures({
   create(factory) {
+    setupMockUser(factory);
+    setupThemes(factory);
+    setupCategories(factory);
     factory.addResource('boards', 'community').withAttributes({ title: 'Community' });
-    factory.addResource('github-users', 'github-writer')
-      .withAttributes({
-        name: "Writer McWriteface",
-        permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
-      });
-    factory.addResource('data-sources', 'mock-auth')
-      .withAttributes({
-        sourceType: '@cardstack/mock-auth',
-        'may-create-user': true,
-        'user-rewriter': './cardstack/mock-auth-rewriter.js',
-        params: {
-          provideUserSchema: false,
-          users: {
-            'github-writer': { type: 'github-users', id: 'github-writer' },
-          }
-        }
-      });
   },
   destroy() {
     return [{ type: 'articles' }];
@@ -182,7 +148,23 @@ module('Acceptance | new article', function(hooks) {
     assert.deepEqual(article.relationships.theme.data, { type: 'themes', id: 'modern'}, 'the default theme is set correctly');
   });
 
-  skip('TODO the slug cannot be empty', async function(/*assert*/) {
+  test('the slug cannot be empty', async function(assert) {
+    await navigateToNewArticle();
+    await click('[data-test-cs-version-control-button-save="false"]');
+
+    // TODO currently there is a bug where we are not showing validation errors when trying to save new documents that fail validation
+    // https://github.com/cardstack/cardstack/issues/688
+    // After this bug is fixed replace the timeout below with a `waitFor`.
+
+    // Give the hub a moment to return an error. Because of the bug above, this error is invisible to the user--so lets just wait 5 secs
+    await new Promise(res => setTimeout(() => { res() }), 5000);
+    assert.dom('[data-test-cs-version-control-button-save="false"]').exists();
+  });
+
+  skip('TODO all the categories are available in the category drop down', async function(/*assert*/) {
+  });
+
+  skip('TODO all the themes are available in the theme picker', async function(/*assert*/) {
   });
 
 });
