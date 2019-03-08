@@ -1,14 +1,19 @@
 import { module, test, skip } from 'qunit';
 import { visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
+import { setupTestArticle } from '../helpers/article-utils';
 import Fixtures from '@cardstack/test-support/fixtures';
 
 const scenario = new Fixtures({
   create(factory) {
-    // factory.addResource('boards', 'community').withAttributes({
-    factory.addResource('boards', 'community').withAttributes({
+    setupTestArticle(factory);
+    factory.addResource('boards', 'community')
+    .withAttributes({
       title: 'Community'
-    });
+    })
+    .withRelated('articles', [
+      { type: 'articles', id: '123' }
+    ]);
   },
 });
 module('Acceptance | cardboard', function(hooks) {
@@ -30,7 +35,16 @@ module('Acceptance | cardboard', function(hooks) {
     assert.dom('[data-test-board-isolated-title]').hasText('Community');
   });
 
-  skip('TODO emedded article renders', async function(/*assert*/) {
-    // add the tests that needed to be removed from the integration tests due to the need for articles components to leverage session
+  test('emedded article renders', async function(assert) {
+    await visit('/');
+
+    assert.dom('[data-test-article-embedded-title]').hasText('Hello');
+    assert.dom('[data-test-article-embedded-description]').hasText(`Why doors?`);
+    assert.dom('[data-test-article-embedded-published-date]').hasAnyText();
+    assert.dom('[data-test-article-embedded-category]').hasText(`LOLz`);
+    assert.dom('.article-embedded.modern').exists();
+  });
+
+  skip('TODO add test for cover image when rendering embedded article', async function(/*assert*/) {
   });
 });

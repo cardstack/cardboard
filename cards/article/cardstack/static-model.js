@@ -45,12 +45,12 @@ factory.addResource('content-types', 'articles')
       caption: 'Published',
       editorComponent: 'field-editors/publish-toggle'
     }),
-    
+
     factory.addResource('fields', 'cover-image').withAttributes({
       fieldType: '@cardstack/core-types::belongs-to',
     })
     .withRelated('related-types', [{ type: 'content-types', id: 'cardstack-images' }]),
-    
+
     factory.addResource('fields', 'author').withAttributes({
       fieldType: '@cardstack/core-types::belongs-to',
       editorOptions: { hideFromEditor: true },
@@ -116,6 +116,8 @@ factory.addResource('content-types', 'themes')
       fieldType: '@cardstack/core-types::string'
     }),
   ]);
+
+// TODO let's move this to our default data source...
 factory.addResource('themes', 'modern')
   .withAttributes({ name: 'Modern' });
 factory.addResource('themes', 'sharp')
