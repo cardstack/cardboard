@@ -1,0 +1,1 @@
+export { default } from 'cardboard-article/components/field-editors/string-text-area';

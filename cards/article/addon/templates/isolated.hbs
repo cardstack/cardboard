@@ -3,12 +3,16 @@
         Ideally we shouldn't have to do that. filed as https://github.com/cardstack/cardstack/issues/685 --}}
   {{#cs-field content "theme"}}{{/cs-field}}
 
-  <div class="article-isolated--cover-image">{{cs-field content "coverImage"}}</div>
+  {{#cs-field content "coverImage"}}
+    <div class="article-isolated--cover-image
+               {{if (and cardstackTools.editing (not coverImageBackgroundImageCss)) 'cardstack-image-placeholder'}}"
+               style={{coverImageBackgroundImageCss}}></div>
+  {{/cs-field}}
   <h1 data-test-article-isolated-title>{{content.title}}</h1>
   <p data-test-article-isolated-description>{{content.description}}</p>
-  <div data-test-article-isolated-author>{{content.authorName}}</div>
-  <div data-test-article-isolated-published-date>{{publishedDate}}</div>
-  <div data-test-article-isolated-category>{{content.category.name}}</div>
+  <div>author: <span data-test-article-isolated-author>{{content.authorName}}</span></div>
+  <div>published: <span data-test-article-isolated-published-date>{{publishedDate}}</span></div>
+  <div>category: <span data-test-article-isolated-category>{{content.category.name}}</span></div>
   <div data-test-article-isolated-body>
     {{content.body}}
   </div>

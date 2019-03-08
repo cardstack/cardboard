@@ -4,6 +4,16 @@
   margin-right: auto;
 }
 
+.article-isolated--cover-image.cardstack-image-placeholder {
+  background-size: contain;
+}
+
 .article-isolated--cover-image {
-  max-width: 300px;
+  margin-top: 4rem;
+  width: 100%;
+  min-height: 20rem;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }

@@ -2,3 +2,16 @@
   display: block;
   text-decoration: none;
 }
+
+.article-embedded--cover-image.cardstack-image-placeholder {
+  background-size: contain;
+}
+
+.article-embedded--cover-image {
+  width: 100%;
+  min-height: 10rem;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}

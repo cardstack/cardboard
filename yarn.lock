@@ -920,10 +920,10 @@
     tar-fs "^1.16.0"
     tar-stream "^1.5.4"
 
-"@cardstack/image@^0.13.54":
-  version "0.13.54"
-  resolved "https://registry.yarnpkg.com/@cardstack/image/-/image-0.13.54.tgz#a1e3c42e0ee76c807782f0689cb484ade1bd3a90"
-  integrity sha512-EIzgqcRl2YdnKnvJ3E5yKe4T7+ZiZj1zP6bJPyMMe2rglszM4NUmwNUCD6bycQS0MFGVA+wyk8nZzU4cLvNBDg==
+"@cardstack/image@^0.13.55":
+  version "0.13.55"
+  resolved "https://registry.yarnpkg.com/@cardstack/image/-/image-0.13.55.tgz#770e29d0ac5df4c4c7d8c5e1c7f544cd23cc4dec"
+  integrity sha512-bR4q6ep2gXMkSGou6Z6TddSd72m/Gh7bGuolh9cNyuwM/AbCC2lBQutOX9BR4EBDQHWPflu0wLD3F31aQqjxqA==
   dependencies:
     "@cardstack/plugin-utils" "0.13.54"
     "@cardstack/test-support" "0.13.54"

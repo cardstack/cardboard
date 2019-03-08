@@ -28,10 +28,20 @@ export function setupCategories(factory) {
     .withAttributes({ name: 'LOLz' });
 }
 
+export function setupTestImage(factory) {
+  factory.addResource('cardstack-images', 'test-image')
+    .withRelated('file', factory.addResource('cardstack-files', 'lol-cat.jpg')
+      .withAttributes({
+        'content-type': 'image/jpg',
+        'file-name': 'lol-cat.jpg'
+      }));
+}
+
 export function setupTestArticle(factory) {
   setupMockUser(factory);
   setupThemes(factory);
   setupCategories(factory);
+  setupTestImage(factory);
 
   factory.addResource('articles', '123')
     .withAttributes({
@@ -45,5 +55,6 @@ export function setupTestArticle(factory) {
     .withRelated('readers', { type: 'groups', id: 'everyone' })
     .withRelated('author', { type: 'github-users', id: 'github-writer' })
     .withRelated('theme', { type: 'themes', id: 'modern' })
-    .withRelated('category', { type: 'categories', id: 'lolz' });
+    .withRelated('category', { type: 'categories', id: 'lolz' })
+    .withRelated('cover-image', { type: 'cardstack-images', id: 'test-image' });
 }
