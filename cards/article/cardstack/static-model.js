@@ -59,6 +59,7 @@ factory.addResource('content-types', 'articles')
 
     factory.addResource('fields', 'category').withAttributes({
       fieldType: '@cardstack/core-types::belongs-to',
+      editorOptions: { displayFieldName: 'name' },
       editorComponent: 'field-editors/dropdown-choices-editor'
     })
     .withRelated('related-types', [{ type: 'content-types', id: 'categories' }]),
@@ -116,14 +117,6 @@ factory.addResource('content-types', 'themes')
       fieldType: '@cardstack/core-types::string'
     }),
   ]);
-
-// TODO let's move this to our default data source...
-factory.addResource('themes', 'modern')
-  .withAttributes({ name: 'Modern' });
-factory.addResource('themes', 'sharp')
-  .withAttributes({ name: 'Sharp' });
-factory.addResource('themes', 'dark')
-  .withAttributes({ name: 'Dark' });
 
 factory.addResource('grants', 'article-world-read')
   .withRelated('who', [{ type: 'fields', id: 'readers' }])

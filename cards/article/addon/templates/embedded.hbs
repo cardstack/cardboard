@@ -6,7 +6,15 @@
   {{/cs-field}}
   <h2 data-test-article-embedded-title>{{content.title}}</h2>
   <p data-test-article-embedded-description>{{content.description}}</p>
-  <div>author: <span data-test-article-embedded-author>{{content.authorName}}</span></div>
-  <div>published: <span data-test-article-embedded-published-date>{{publishedDate}}</span></div>
-  <div>category: <span data-test-article-embedded-category>{{content.category.name}}</span></div>
+  <div data-test-article-embedded-author>{{content.authorName}}</div>
+  <div data-test-article-embedded-published-date>{{publishedDate}}</div>
+  {{#cs-field content 'category' as |category|}}
+    <div data-test-article-embedded-category>
+      {{#if (and cardstackTools.editing (not category))}}
+        Enter Category
+      {{else}}
+        {{category.name}}
+      {{/if}}
+    </div>
+  {{/cs-field}}
 </a>

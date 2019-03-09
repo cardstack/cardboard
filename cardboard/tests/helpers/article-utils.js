@@ -26,6 +26,10 @@ export function setupThemes(factory) {
 export function setupCategories(factory) {
   factory.addResource('categories', 'lolz')
     .withAttributes({ name: 'LOLz' });
+  factory.addResource('categories', 'squash')
+    .withAttributes({ name: 'Squash' });
+  factory.addResource('categories', 'hair')
+    .withAttributes({ name: 'Hair' });
 }
 
 export function setupTestImage(factory) {

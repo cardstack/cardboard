@@ -3,6 +3,11 @@
         Ideally we shouldn't have to do that. filed as https://github.com/cardstack/cardstack/issues/685 --}}
   {{#cs-field content "theme"}}{{/cs-field}}
 
+  {{!-- This element is used to prevent async from leaking in tests while loading models --}}
+  {{#if (and (eq config.environment 'test') loadData.isIdle)}}
+    <div style="display:none" data-test-article-isolated-done-loading></div>
+  {{/if}}
+
   {{#cs-field content "coverImage"}}
     <div class="article-isolated--cover-image
                {{if (and cardstackTools.editing (not coverImageBackgroundImageCss)) 'cardstack-image-placeholder'}}"
@@ -10,10 +15,19 @@
   {{/cs-field}}
   <h1 data-test-article-isolated-title>{{content.title}}</h1>
   <p data-test-article-isolated-description>{{content.description}}</p>
-  <div>author: <span data-test-article-isolated-author>{{content.authorName}}</span></div>
-  <div>published: <span data-test-article-isolated-published-date>{{publishedDate}}</span></div>
-  <div>category: <span data-test-article-isolated-category>{{content.category.name}}</span></div>
+  <div data-test-article-isolated-author>{{content.authorName}}</div>
+  <div data-test-article-isolated-published-date>{{publishedDate}}</div>
+  {{#cs-field content 'category' as |category|}}
+    <div data-test-article-isolated-category>
+      {{#if (and cardstackTools.editing (not category))}}
+        Enter Category
+      {{else}}
+        {{category.name}}
+      {{/if}}
+    </div>
+  {{/cs-field}}
   <div data-test-article-isolated-body>
     {{content.body}}
   </div>
+
 </div>

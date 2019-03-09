@@ -40,7 +40,6 @@ module('Acceptance | article', function(hooks) {
 
   test('isolated article renders', async function(assert) {
     await visit('/articles/hello');
-
     assert.equal(currentURL(), '/articles/hello');
     assert.dom('[data-test-article-isolated-title]').hasText('Hello');
     assert.dom('[data-test-article-isolated-body]').hasText(`Hi everybody! I'm squash.`);

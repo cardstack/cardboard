@@ -19,7 +19,7 @@
     "node-tests": "HUB_ENVIRONMENT=test mocha ../../node-test-runner.js --timeout 10000"
   },
   "dependencies": {
-    "@cardstack/rendering": "^0.13.54",
+    "@cardstack/rendering": "^0.13.57",
     "babel-preset-env": "^1.7.0",
     "cardboard-article": "*",
     "cardboard-common": "*",
@@ -28,11 +28,11 @@
     "ember-cli-htmlbars": "^3.0.0"
   },
   "devDependencies": {
-    "@cardstack/eslint-config": "^0.13.54",
-    "@cardstack/jsonapi": "^0.13.54",
-    "@cardstack/mobiledoc": "^0.13.54",
-    "@cardstack/routing": "^0.13.54",
-    "@cardstack/test-support": "^0.13.54",
+    "@cardstack/eslint-config": "^0.13.57",
+    "@cardstack/jsonapi": "^0.13.57",
+    "@cardstack/mobiledoc": "^0.13.57",
+    "@cardstack/routing": "^0.13.57",
+    "@cardstack/test-support": "^0.13.57",
     "@ember/jquery": "^0.5.2",
     "@ember/optional-features": "^0.6.1",
     "broccoli-asset-rev": "^2.7.0",
