@@ -1,5 +1,5 @@
-import { module, test, skip } from 'qunit';
-import { click, visit, currentURL, fillIn } from '@ember/test-helpers';
+import { module, test } from 'qunit';
+import { click, visit, currentURL, fillIn, waitFor } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import Fixtures from '@cardstack/test-support/fixtures';
 import { setupMockUser, login } from '../helpers/login';
@@ -13,6 +13,7 @@ async function navigateToNewArticle() {
   let [ addArticle ] = [ ... document.querySelectorAll('.cs-create-menu li')].filter(element => /Article/.test((element.textContent || '').trim()));
   let button = addArticle.querySelector('button');
   await click(button);
+  await waitFor('[data-test-article-isolated-done-loading]');
 }
 
 async function setSlugField(slug) {
@@ -161,10 +162,35 @@ module('Acceptance | new article', function(hooks) {
     assert.dom('[data-test-cs-version-control-button-save="false"]').exists();
   });
 
-  skip('TODO all the categories are available in the category drop down', async function(/*assert*/) {
+  test('all the categories are available in the category drop down', async function(assert) {
+    await navigateToNewArticle();
+
+    let element = findTriggerElementWithLabel(/Category/);
+    let section = element.closest('section');
+    await click(element);
+    assert.dom(section.querySelector('.ember-power-select-selected-item')).doesNotContainText();
+
+    await click(section.querySelector('.ember-power-select-trigger'));
+
+    assert.dom('.ember-power-select-options').hasTextContaining('LOLz');
+    assert.dom('.ember-power-select-options').hasTextContaining('Squash');
+    assert.dom('.ember-power-select-options').hasTextContaining('Hair');
+    assert.dom('.ember-power-select-option[aria-selected="true"]').doesNotExist();
   });
 
-  skip('TODO all the themes are available in the theme picker', async function(/*assert*/) {
-  });
+  test('all the themes are available in the theme picker', async function(assert) {
+    await navigateToNewArticle();
 
+    let element = findTriggerElementWithLabel(/Theme/);
+    let section = element.closest('section');
+    await click(element);
+    assert.dom(section.querySelector('.ember-power-select-selected-item')).hasText('Modern');
+
+    await click(section.querySelector('.ember-power-select-trigger'));
+
+    assert.dom('.ember-power-select-options').hasTextContaining('Dark');
+    assert.dom('.ember-power-select-options').hasTextContaining('Modern');
+    assert.dom('.ember-power-select-options').hasTextContaining('Sharp');
+    assert.dom('.ember-power-select-option[aria-selected="true"]').hasText('Modern');
+  });
 });
