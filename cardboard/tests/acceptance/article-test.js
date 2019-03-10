@@ -3,7 +3,7 @@ import { click, visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import Fixtures from '@cardstack/test-support/fixtures';
 import { login } from '../helpers/login';
-import { saveArticle, findTriggerElementWithLabel } from '../helpers/editor-utils';
+import { saveDocument, findTriggerElementWithLabel } from '../helpers/editor-utils';
 import { getArticles, setupTestArticle } from '../helpers/article-utils';
 
 async function navigateToArticleAsWriter() {
@@ -17,7 +17,7 @@ async function unpublishArticle() {
   let element = findTriggerElementWithLabel(/Published/);
   await click(element);
   await click(element.closest('section').querySelector('.cs-toggle-switch'));
-  await saveArticle();
+  await saveDocument();
 }
 
 const scenario = new Fixtures({
@@ -62,7 +62,7 @@ module('Acceptance | article', function(hooks) {
     assert.dom(toggleSwitch).hasText('No');
     assert.dom('.cs-field-editor-published-date--published-date').hasAnyText();
 
-    await saveArticle();
+    await saveDocument();
 
     assert.dom('.cs-field-editor-published-date--published-date').doesNotExist();
     let [ article ] = await getArticles();
@@ -86,7 +86,7 @@ module('Acceptance | article', function(hooks) {
     let toggleSwitch = element.closest('section').querySelector('.cs-toggle-switch');
     await click(toggleSwitch);
 
-    await saveArticle();
+    await saveDocument();
     let [ article ] = await getArticles();
     assert.deepEqual(article.relationships.readers.data, { type: 'groups', id: 'everyone' }, 'readers is set correctly');
   });
@@ -102,7 +102,7 @@ module('Acceptance | article', function(hooks) {
     assert.dom(toggleSwitch).hasText('Yes');
     assert.dom('.cs-field-editor-published-date--published-date').doesNotExist();
 
-    await saveArticle();
+    await saveDocument();
 
     assert.dom('.cs-field-editor-published-date--published-date').hasAnyText();
     let [ article ] = await getArticles();
