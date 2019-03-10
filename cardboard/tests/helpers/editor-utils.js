@@ -1,7 +1,7 @@
 
 import { click, waitFor } from '@ember/test-helpers';
 
-export async function saveArticle() {
+export async function saveDocument() {
   await click('[data-test-cs-version-control-button-save="false"]');
   await waitFor('[data-test-cs-version-control-button-save="true"]');
 }

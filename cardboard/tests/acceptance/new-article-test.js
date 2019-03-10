@@ -3,7 +3,7 @@ import { click, visit, currentURL, fillIn, waitFor } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import Fixtures from '@cardstack/test-support/fixtures';
 import { setupMockUser, login } from '../helpers/login';
-import { saveArticle, findTriggerElementWithLabel } from '../helpers/editor-utils';
+import { saveDocument, findTriggerElementWithLabel } from '../helpers/editor-utils';
 import { getArticles, setupThemes, setupCategories } from '../helpers/article-utils';
 
 async function navigateToNewArticle() {
@@ -50,7 +50,7 @@ module('Acceptance | new article', function(hooks) {
     await navigateToNewArticle();
     assert.equal(currentURL(), '/articles/new');
     await setSlugField('test');
-    await saveArticle();
+    await saveDocument();
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -65,7 +65,7 @@ module('Acceptance | new article', function(hooks) {
     await click(element.closest('section').querySelector('.cs-toggle-switch'));
 
     await setSlugField('test');
-    await saveArticle();
+    await saveDocument();
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -75,7 +75,7 @@ module('Acceptance | new article', function(hooks) {
   test('the authors field is set correctly for articles', async function(assert) {
     await navigateToNewArticle();
     await setSlugField('test');
-    await saveArticle();
+    await saveDocument();
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -86,7 +86,7 @@ module('Acceptance | new article', function(hooks) {
   test('the created-date field is set correctly for articles', async function(assert) {
     await navigateToNewArticle();
     await setSlugField('test');
-    await saveArticle();
+    await saveDocument();
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -96,7 +96,7 @@ module('Acceptance | new article', function(hooks) {
   test('the article publish date is not set when the article is not published', async function(assert) {
     await navigateToNewArticle();
     await setSlugField('test');
-    await saveArticle();
+    await saveDocument();
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -121,7 +121,7 @@ module('Acceptance | new article', function(hooks) {
     await click(toggleSwitch);
 
     await setSlugField('test');
-    await saveArticle();
+    await saveDocument();
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -142,7 +142,7 @@ module('Acceptance | new article', function(hooks) {
     assert.dom('.article-isolated.modern').exists();
 
     await setSlugField('test');
-    await saveArticle();
+    await saveDocument();
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
