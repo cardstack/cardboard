@@ -1,0 +1,4 @@
+.field-editor--string-text-area textarea {
+  width: 100%;
+  min-height: 5rem;
+}
