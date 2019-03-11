@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { click, visit, currentURL, fillIn, waitFor } from '@ember/test-helpers';
+import { click, currentURL, fillIn, waitFor } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import Fixtures from '@cardstack/test-support/fixtures';
 import { setupMockUser, login } from '../helpers/login';
@@ -17,10 +17,7 @@ async function navigateToNewArticle() {
 }
 
 async function setSlugField(slug) {
-  let element = findTriggerElementWithLabel(/Slug/);
-  await click(element);
-  let input = element.closest('section').querySelector('input');
-  await fillIn(input, slug);
+  await fillIn('[data-test-cs-field-editor="slug"] input[type="text"]', slug);
 }
 
 const scenario = new Fixtures({
@@ -60,9 +57,7 @@ module('Acceptance | new article', function(hooks) {
   test('the readers field is set correctly for new published articles', async function(assert) {
     await navigateToNewArticle();
 
-    let element = findTriggerElementWithLabel(/Published/);
-    await click(element);
-    await click(element.closest('section').querySelector('.cs-toggle-switch'));
+    await click('[data-test-cs-field-editor="publishedDate"] .cs-toggle-switch');
 
     await setSlugField('test');
     await saveDocument();
@@ -103,22 +98,14 @@ module('Acceptance | new article', function(hooks) {
     assert.notOk(article.attributes['published-date'], 'the published date is not set');
     assert.equal(article.attributes['is-draft'], true, 'is-draft is set correectly');
 
-    await visit(`/articles/test`);
-    let element = findTriggerElementWithLabel(/Published/);
-    await click(element);
-
-    let toggleSwitch = element.closest('section').querySelector('.cs-toggle-switch');
-    assert.dom(toggleSwitch).hasText('No');
-    assert.dom('.cs-field-editor-published-date--published-date').doesNotExist();
+    assert.dom('[data-test-cs-field-editor="publishedDate"] .cs-toggle-switch').hasText('No');
+    assert.dom('.cardboard-field-created-date--published-date').doesNotExist();
   });
 
   test('the article publish date is set when the article is published', async function(assert) {
     await navigateToNewArticle();
 
-    let element = findTriggerElementWithLabel(/Published/);
-    await click(element);
-    let toggleSwitch = element.closest('section').querySelector('.cs-toggle-switch');
-    await click(toggleSwitch);
+    await click('[data-test-cs-field-editor="publishedDate"] .cs-toggle-switch');
 
     await setSlugField('test');
     await saveDocument();
@@ -128,13 +115,8 @@ module('Acceptance | new article', function(hooks) {
     assert.ok(article.attributes['published-date'], 'the published date is set');
     assert.equal(article.attributes['is-draft'], false, 'is-draft is set correectly');
 
-    await visit(`/articles/test`);
-    element = findTriggerElementWithLabel(/Published/);
-    await click(element);
-
-    toggleSwitch = element.closest('section').querySelector('.cs-toggle-switch');
-    assert.dom(toggleSwitch).hasText('Yes');
-    assert.dom('.cs-field-editor-published-date--published-date').hasAnyText();
+    assert.dom('[data-test-cs-field-editor="publishedDate"] .cs-toggle-switch').hasText('Yes');
+    assert.dom('.cardboard-field-created-date--published-date').hasAnyText();
   });
 
   test('the theme has been set to the default theme', async function(assert) {

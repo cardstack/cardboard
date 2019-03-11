@@ -1,0 +1,10 @@
+<div class="field-editor">
+  <span class="cardboard-field-slug--sample-url-prefix">{{urlPrefix}}/articles/</span>
+  <input
+    type="text"
+    value={{get content field}}
+    disabled={{disabled}}
+    oninput={{action (mut (get content field)) value="target.value"}}
+    onblur={{action onchange}}
+  >
+</div>

@@ -19,10 +19,14 @@ factory.addResource('content-types', 'articles')
   })
   .withRelated('fields', [
     factory.addResource('fields', 'slug').withAttributes({
+      editorOptions: { headerSection: true, sortOrder: 150 },
+      caption: 'URL Path',
+      editorComponent: 'field-editors/url-path',
       fieldType: '@cardstack/core-types::string'
     }),
 
     factory.addResource('fields', 'title').withAttributes({
+      editorOptions: { headerSection: true, sortOrder: 10 },
       fieldType: '@cardstack/core-types::string'
     }),
 
@@ -36,12 +40,14 @@ factory.addResource('content-types', 'articles')
     }),
 
     factory.addResource('fields', 'created-date').withAttributes({
-      editorOptions: { hideFromEditor: true },
+      editorOptions: { headerSection: true, sortOrder: 120, hideTitle: true },
+      editorComponent: 'field-editors/created-date',
       fieldType: '@cardstack/core-types::date',
     }),
 
     factory.addResource('fields', 'published-date').withAttributes({
       fieldType: '@cardstack/core-types::date',
+      editorOptions: { headerSection: true, sortOrder: 30 },
       caption: 'Published',
       editorComponent: 'field-editors/publish-toggle'
     }),
