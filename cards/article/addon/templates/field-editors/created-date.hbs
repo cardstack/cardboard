@@ -1,0 +1,9 @@
+{{#if (get content field)}}
+  <span class="cardboard-field-created-date">
+   {{#if (and publishedDate content.id (not publishedDateIsDirty) (not content.isDraft))}}
+     Published at <span class="cardboard-field-created-date--published-date">{{publishedDate}}</span>
+   {{else}}
+     Created at <span class="cardboard-field-created-date--created-date">{{createdDate}}</span>
+   {{/if}}
+  </span>
+{{/if}}

@@ -12,9 +12,7 @@ factory.addResource('content-types', 'boards')
     }
   })
   .withRelated('fields', [
-    factory.addResource('fields', 'title').withAttributes({
-      fieldType: '@cardstack/core-types::string'
-    }),
+    { type: 'fields', id: 'title'},
     factory.addResource('fields', 'articles').withAttributes({
       fieldType: '@cardstack/core-types::has-many'
     })
