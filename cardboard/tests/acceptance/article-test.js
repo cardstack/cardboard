@@ -44,8 +44,8 @@ module('Acceptance | article', function(hooks) {
     assert.dom('[data-test-article-isolated-description]').hasText(`Why doors?`);
     assert.dom('[data-test-article-isolated-published-date]').hasAnyText();
     assert.dom('[data-test-article-isolated-category]').hasText(`LOLz`);
-    assert.dom('.article-isolated.modern').exists();
-    assert.dom('.article-isolated--cover-image').hasStyle({ 'background-image': 'url("http://localhost:3000/api/cardstack-files/lol-cat.jpg")' });
+    assert.dom('[data-test-article-isolated="modern"]').exists();
+    assert.dom('[data-test-article-isolated-cover-image]').hasStyle({ 'background-image': 'url("http://localhost:3000/api/cardstack-files/lol-cat.jpg")' });
   });
 
   test('when a published article is unpublished it unsets the published-date field', async function(assert) {

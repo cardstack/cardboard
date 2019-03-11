@@ -14,13 +14,7 @@
   --cardboard-highlight-purple: #4d4c6d;
   --cardboard-dark-purple: #1b1942;
   --cardboard-deep-purple: #01002c;
-  --cardboard-green: #3aa78f;
-  --cardboard-red: #ff0404;
-  --cardboard-red-failed: #db3d3d;
-
+  --cardboard-green-success: #3aa78f;
+  --cardboard-red-warning: #ff0404;
   --cardboard-gradient: linear-gradient(90deg, #5e8fff 0%, #9b49ff 100%), #7a6fff;
-  --cardboard-bitcoin-gradient: linear-gradient(45deg, #f76b1c 0%, #fad961 100%), #f76b1c;
-  --cardboard-ether-gradient: linear-gradient(45deg, #003bff 0%, #00ccae 100%), #003bff;
-  --cardboard-litecoin-gradient: linear-gradient(45deg, #3023ae 0%, #c86dd7 100%), #3023ae;
-  --cardboard-zcash-gradient: linear-gradient(45deg, #8022ae 0%, #ff0000 100%), #8022ae;
 }

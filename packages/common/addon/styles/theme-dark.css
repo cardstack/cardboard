@@ -1,0 +1,57 @@
+.dark-theme {
+  /* Fonts */
+  --cardboard-merriweather-regular: "Merriweather Regular";
+  --cardboard-merriweather-bold: "Merriweather Bold";
+  --cardboard-merriweather-black: "Merriweather Black", var(--cardboard-merriweather-bold);
+  --cardboard-merriweather-black-italic: "Merriweather Black Italic", var(--cardboard-merriweather-bold-italic);
+
+  /* Text */
+  --cardboard-theme-title-text: var(--cardboard-merriweather-black);
+  --cardboard-theme-subhead-text: var(--cardboard-roboto-regular);
+  --cardboard-theme-paragraph-text: var(--cardboard-merriweather-regular);
+  --cardboard-theme-blockquote-text: var(--cardboard-merriweather-regular);
+
+  /* Colors */
+  --cardboard-theme-background-color: #000;
+  --cardboard-theme-text-color: #fff;
+  --cardboard-theme-highlight-color: #cc0000;
+  --cardboard-theme-paragraph-color: #a2a2a2;
+}
+
+.dark-theme--title {
+  font-weight: 900;
+}
+
+.dark-theme--subhead,
+.dark-theme--mobiledoc h2 {
+  font-weight: 400;
+  text-decoration: underline;
+  text-decoration-color: var(--cardboard-theme-highlight-color);
+}
+
+.dark-theme--mobiledoc h3 {
+  background-color: var(--cardboard-theme-background-color);
+  font-weight: 400;
+  letter-spacing: 6px;
+}
+
+.dark-theme--mobiledoc p:first-of-type::first-letter {
+  color: var(--cardboard-theme-text-color);
+  text-shadow: -7px -2px 0 var(--cardboard-theme-highlight-color);
+}
+
+.dark-theme--mobiledoc blockquote {
+  letter-spacing: -0.4px;
+  max-width: 600px;
+}
+.dark-theme--mobiledoc blockquote::before {
+  content: "";
+}
+.dark-theme--mobiledoc blockquote::after {
+  height: 200px;
+  background-color: var(--cardboard-theme-highlight-color);
+  margin-top: -25%;
+  margin-left: 10%;
+  padding-bottom: 20px;
+}
+

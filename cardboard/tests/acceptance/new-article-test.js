@@ -121,7 +121,7 @@ module('Acceptance | new article', function(hooks) {
 
   test('the theme has been set to the default theme', async function(assert) {
     await navigateToNewArticle();
-    assert.dom('.article-isolated.modern').exists();
+    assert.dom('[data-test-article-isolated="modern"]').exists();
 
     await setSlugField('test');
     await saveDocument();

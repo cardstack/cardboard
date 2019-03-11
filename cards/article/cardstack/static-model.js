@@ -30,6 +30,10 @@ factory.addResource('content-types', 'articles')
       fieldType: '@cardstack/core-types::string'
     }),
 
+    factory.addResource('fields', 'subhead').withAttributes({
+      fieldType: '@cardstack/core-types::string'
+    }),
+
     factory.addResource('fields', 'description').withAttributes({
       fieldType: '@cardstack/core-types::string',
       editorComponent: 'field-editors/string-text-area'
@@ -120,6 +124,9 @@ factory.addResource('content-types', 'categories')
 factory.addResource('content-types', 'themes')
   .withRelated('fields', [
     factory.addResource('fields', 'name').withAttributes({
+      fieldType: '@cardstack/core-types::string'
+    }),
+    factory.addResource('fields', 'cover').withAttributes({
       fieldType: '@cardstack/core-types::string'
     }),
   ]);
