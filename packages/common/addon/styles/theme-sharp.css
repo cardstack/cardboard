@@ -1,0 +1,36 @@
+.sharp-theme {
+  /* Fonts */
+  --cardboard-playfair-regular: "Playfair Regular";
+  --cardboard-playfair-bold: "Playfair Bold";
+  --cardboard-playfair-black: "Playfair Black", var(--cardboard-playfair-bold);
+  --cardboard-playfair-black-italic: "Playfair Black Italic", var(--cardboard-playfair-bold-italic);
+  --cardboard-pt-sans-regular: "PT Sans Regular";
+
+  /* Text */
+  --cardboard-theme-title-text: var(--cardboard-playfair-regular);
+  --cardboard-theme-subhead-text: var(--cardboard-pt-sans-bold);
+  --cardboard-theme-paragraph-text: var(--cardboard-pt-sans-regular);
+  --cardboard-theme-blockquote-text: var(--cardboard-playfair-black-italic);
+
+  /* Colors */
+  --cardboard-theme-background-color: #f6eee1;
+  --cardboard-theme-text-color: #4a4a4a;
+  --cardboard-theme-highlight-color: #ff6b02;
+  --cardboard-theme-paragraph-color: #4a4a4a;
+}
+
+.sharp-theme--title {
+  background-color: rgba(221, 221, 221, 0.52);
+  border-width: 7px;
+}
+
+.sharp-theme--subhead,
+.sharp-theme--mobiledoc h2 {
+  text-decoration: underline;
+  text-decoration-color: var(--cardboard-theme-highlight-color);
+}
+
+.sharp-theme--mobiledoc h3 {
+  font-size: 18px;
+  text-transform: uppercase;
+}

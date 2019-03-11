@@ -1,33 +1,51 @@
-<div class="article-isolated {{content.theme.id}}">
-  {{!-- I'm adding this cs-field component in the template just so that the field can appear in the right edge.
-        Ideally we shouldn't have to do that. filed as https://github.com/cardstack/cardstack/issues/685 --}}
-  {{#cs-field content "theme"}}{{/cs-field}}
+{{!-- I'm adding this cs-field component in the template just so that the field can appear in the right edge.
+          Ideally we shouldn't have to do that. filed as https://github.com/cardstack/cardstack/issues/685 --}}
+{{#cs-field content "theme"}}{{/cs-field}}
 
-  {{!-- This element is used to prevent async from leaking in tests while loading models --}}
-  {{#if (and (eq config.environment 'test') loadData.isIdle)}}
-    <div style="display:none" data-test-article-isolated-done-loading></div>
-  {{/if}}
+{{!-- This element is used to prevent async from leaking in tests while loading models --}}
+{{#if (and (eq config.environment 'test') loadData.isIdle)}}
+  <div style="display:none" hidden="true" data-test-article-isolated-done-loading></div>
+{{/if}}
 
-  {{#cs-field content "coverImage"}}
-    <div class="article-isolated--cover-image
-               {{if (and cardstackTools.editing (not coverImageBackgroundImageCss)) 'cardstack-image-placeholder'}}"
-               style={{coverImageBackgroundImageCss}}></div>
-  {{/cs-field}}
-  <h1 data-test-article-isolated-title>{{content.title}}</h1>
-  <p data-test-article-isolated-description>{{content.description}}</p>
-  <div data-test-article-isolated-author>{{content.authorName}}</div>
-  <div data-test-article-isolated-published-date>{{publishedDate}}</div>
-  {{#cs-field content 'category' as |category|}}
-    <div data-test-article-isolated-category>
-      {{#if (and cardstackTools.editing (not category))}}
-        Enter Category
-      {{else}}
-        {{category.name}}
-      {{/if}}
+<div class="article-isolated {{content.theme.id}}-theme" data-test-article-isolated={{content.theme.id}}>
+  <div class="article-isolated--wrapper">
+    <header class="article-isolated--header">
+      {{#cs-field content "coverImage"}}
+        {{#if (or content.coverImage editMode)}}
+          <div class="article-isolated--cover-image {{if (not content.coverImage) "cardstack-image-placeholder"}}"
+               style={{coverImageBackgroundImageCss}}
+               data-test-article-isolated-cover-image>
+          </div>
+        {{/if}}
+      {{/cs-field}}
+      <hgroup class="article-isolated--hgroup {{if (or content.coverImage editMode) "article-isolated--hgroup-overlay"}} {{content.theme.id}}-theme--hgroup">
+        <h1 class="article-isolated--title {{content.theme.id}}-theme--title" data-test-article-isolated-title>{{content.title}}</h1>
+        {{#cs-field content "subhead"}}
+          {{#if (or content.subhead editMode)}}
+            <h2 class="article-isolated--subhead {{content.theme.id}}-theme--subhead" data-test-article-isolated-subhead>{{content.subhead}}</h2>
+          {{/if}}
+        {{/cs-field}}
+      </hgroup>
+    </header>
+    <div>
+      {{#cs-field content 'description' name=description}}
+        {{#if (or content.description editMode)}}
+          <p data-test-article-isolated-description>{{content.description}}</p>
+        {{/if}}
+      {{/cs-field}}
+      <div data-test-article-isolated-published-date>{{publishedDate}}</div>
+      {{#cs-field content "category" as |category|}}
+        <div data-test-article-isolated-category>
+          {{#if (and editMode (not category))}}
+            Select Category
+          {{else}}
+            <span hidden>{{category.name}}</span>
+          {{/if}}
+        </div>
+      {{/cs-field}}
     </div>
-  {{/cs-field}}
-  <div data-test-article-isolated-body>
-    {{content.body}}
+    <div class="article-isolated--mobiledoc {{content.theme.id}}-theme--mobiledoc" data-test-article-isolated-body>
+      {{content.body}}
+    </div>
   </div>
-
 </div>

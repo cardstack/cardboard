@@ -1,0 +1,212 @@
+:root {
+  --cardboard-regular-text: "Open Sans Regular", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --cardboard-medium-text: "Open Sans Semibold", var(--cardboard-regular-text);
+  --cardboard-bold-text: "Open Sans Bold", var(--cardboard-medium-text);
+  --cardboard-medium-italic-text: "Open Sans Semibold Italic", var(--cardboard-italic-text);
+  --cardboard-italic-text: "Open Sans Italic";
+  --cardboard-bold-italic-text: "Open Sans Bold Italic", var(--cardboard-medium-italic-text);
+
+  --cardboard-roboto-regular: "Roboto Regular", Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --cardboard-roboto-medium: "Roboto Medium", var(--cardboard-roboto-regular);
+  --cardboard-roboto-bold: "Roboto Bold", var(--cardboard-roboto-medium);
+  --cardboard-roboto-italic-text: "Roboto Italic";
+  --cardboard-roboto-medium-italic-text: "Roboto Medium Italic", var(--cardboard-roboto-italic-text);
+  --cardboard-roboto-bold-italic-text: "Roboto Bold Italic", var(--cardboard-roboto-medium-italic-text);
+}
+
+/* Open Sans */
+@font-face {
+  font-family: "Open Sans Regular";
+  src: url("/cardboard-common/fonts/OpenSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Italic";
+  src: url("/cardboard-common/fonts/OpenSans-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Open Sans Semibold";
+  src: url("/cardboard-common/fonts/OpenSans-SemiBold.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Semibold Italic";
+  src: url("/cardboard-common/fonts/OpenSans-SemiBoldItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Open Sans Bold";
+  src: url("/cardboard-common/fonts/OpenSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans Bold Italic";
+  src: url("/cardboard-common/fonts/OpenSans-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Roboto */
+@font-face {
+  font-family: "Roboto Regular";
+  src: url("/cardboard-common/fonts/Roboto-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Italic";
+  src: url("/cardboard-common/fonts/Roboto-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto Medium";
+  src: url("/cardboard-common/fonts/Roboto-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Medium Italic";
+  src: url("/cardboard-common/fonts/Roboto-MediumItalic.ttf");
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Roboto Bold";
+  src: url("/cardboard-common/fonts/Roboto-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto Bold Italic";
+  src: url("/cardboard-common/fonts/Roboto-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+
+/* Merriweather */
+@font-face {
+  font-family: "Merriweather Light";
+  src: url("/cardboard-common/fonts/Merriweather-Light.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather Light Italic";
+  src: url("/cardboard-common/fonts/Merriweather-LightItalic.ttf");
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Merriweather Regular";
+  src: url("/cardboard-common/fonts/Merriweather-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather Italic";
+  src: url("/cardboard-common/fonts/Merriweather-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Merriweather Bold";
+  src: url("/cardboard-common/fonts/Merriweather-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather Bold Italic";
+  src: url("/cardboard-common/fonts/Merriweather-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Merriweather Black";
+  src: url("/cardboard-common/fonts/Merriweather-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Merriweather Black Italic";
+  src: url("/cardboard-common/fonts/Merriweather-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+/* Playfair Display */
+
+@font-face {
+  font-family: "Playfair Regular";
+  src: url("/cardboard-common/fonts/PlayfairDisplay-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Bold";
+  src: url("/cardboard-common/fonts/PlayfairDisplay-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Black";
+  src: url("/cardboard-common/fonts/PlayfairDisplay-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Playfair Italic";
+  src: url("/cardboard-common/fonts/PlayfairDisplay-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Playfair Bold Italic";
+  src: url("/cardboard-common/fonts/PlayfairDisplay-BoldItalic.ttf");
+  font-weight: 700;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Playfair Black Italic";
+  src: url("/cardboard-common/fonts/PlayfairDisplay-BlackItalic.ttf");
+  font-weight: 900;
+  font-style: italic;
+}
+
+
+/* PT Sans */
+@font-face {
+  font-family: "PT Sans Regular";
+  src: url("/cardboard-common/fonts/PTSans.ttc");
+  font-weight: 400;
+  font-style: normal;
+}

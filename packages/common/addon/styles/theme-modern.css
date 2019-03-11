@@ -1,0 +1,34 @@
+.modern-theme {
+  /* Text */
+  --cardboard-theme-title-text: var(--cardboard-roboto-bold);
+  --cardboard-theme-subhead-text: var(--cardboard-roboto-bold);
+  --cardboard-theme-paragraph-text: var(--cardboard-roboto-medium);
+  --cardboard-theme-blockquote-text: var(--cardboard-roboto-bold);
+
+  /* Colors */
+  --cardboard-theme-background-color: #fff;
+  --cardboard-theme-text-color: #2c2c2c;
+  --cardboard-theme-paragraph-color: #888d92;
+  --cardboard-theme-highlight-color: #ff3746;
+  --cardboard-theme-highlight-shadow-color: rgba(255, 55, 70, 0.52);
+  --cardboard-theme-blockquote-color: #000;
+}
+
+.modern-theme--title {
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+.modern-theme--subhead,
+.modern-theme--mobiledoc h2 {
+  text-decoration: underline;
+  text-decoration-color: var(--cardboard-theme-highlight-color);
+  text-transform: uppercase;
+}
+
+.modern-theme--mobiledoc blockquote {
+  font-size: 24px;
+  letter-spacing: 3px;
+  line-height: 1.8;
+  text-transform: uppercase;
+}

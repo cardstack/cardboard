@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { and } from '@ember/object/computed';
 import { computed } from '@ember/object';
 import moment from 'moment';
 import { inject as service } from '@ember/service';
@@ -16,6 +17,8 @@ export default Component.extend(SetReadersMixin, {
   cardstackTools: service(),
   modelLoader: service(),
   store: service(),
+
+  editMode: and('cardstackTools.active', 'cardstackTools.editing'),
 
   didReceiveAttrs() {
     if (this.get('cardstackTools.active')) {
