@@ -3,6 +3,7 @@
   --cardboard-theme-title-text: var(--cardboard-roboto-bold);
   --cardboard-theme-subhead-text: var(--cardboard-roboto-bold);
   --cardboard-theme-paragraph-text: var(--cardboard-roboto-medium);
+  --cardboard-theme-dropcap-text: var(--cardboard-roboto-bold);
   --cardboard-theme-blockquote-text: var(--cardboard-roboto-bold);
 
   /* Colors */
@@ -21,14 +22,27 @@
 
 .modern-theme--subhead,
 .modern-theme--mobiledoc h2 {
+  padding-right: 1.5em;
   text-decoration: underline;
   text-decoration-color: var(--cardboard-theme-highlight-color);
   text-transform: uppercase;
 }
 
+.modern-theme--mobiledoc p:first-of-type::first-letter {
+  margin-right: 1.25rem;
+  margin-top: -10px;
+  font-size: 110px;
+  letter-spacing: 10px;
+}
+
 .modern-theme--mobiledoc blockquote {
   font-size: 24px;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
   line-height: 1.8;
   text-transform: uppercase;
+}
+.modern-theme--mobiledoc blockquote::before {
+  margin-left: -0.5em;
+  font-size: 180px;
+  text-shadow: 0 7px 16px var(--cardboard-theme-highlight-shadow-color);
 }
