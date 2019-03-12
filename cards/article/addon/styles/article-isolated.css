@@ -99,7 +99,7 @@
 
 .article-isolated--mobiledoc p {
   margin: 0;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
   color: var(--cardboard-theme-paragraph-color, --cardboard-theme-text-color);
   font-family: var(--cardboard-theme-paragraph-text);
   font-size: 18px;
@@ -115,7 +115,8 @@
   margin-right: 10px;
   margin-top: -18px;
   color: var(--cardboard-theme-highlight-color);
-  font-size: 160px;
+  font-family: var(--cardboard-theme-dropcap-text);
+  font-size: 8em;
   letter-spacing: 0;
   line-height: 0.8;
   text-shadow: 0 7px 16px var(--cardboard-theme-highlight-shadow-color);

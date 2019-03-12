@@ -15,6 +15,7 @@
   --cardboard-theme-title-text: var(--cardboard-playfair-black);
   --cardboard-theme-subhead-text: var(--cardboard-pt-sans-regular);
   --cardboard-theme-paragraph-text: var(--cardboard-pt-sans-regular);
+  --cardboard-theme-dropcap-text: var(--cardboard-playfair-black);
   --cardboard-theme-blockquote-text: var(--cardboard-playfair-italic);
 
   /* Colors */
@@ -66,13 +67,11 @@
 .sharp-theme--mobiledoc p:first-of-type::first-letter {
   margin-right: 1.25rem;
   margin-top: 0;
-  font-family: var(--cardboard-playfair-black);
   font-size: 100px;
   letter-spacing: 10px;
 }
 
 .sharp-theme--mobiledoc p {
-  padding-bottom: 2em;
   line-height: 2;
 }
 
