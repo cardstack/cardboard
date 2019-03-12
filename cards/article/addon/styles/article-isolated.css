@@ -55,7 +55,6 @@
 }
 
 .article-isolated--cover-image.cardstack-image-placeholder {
-  margin-top: 4rem;
   background-size: contain;
 }
 
@@ -133,7 +132,7 @@
 /* Blockquote */
 .article-isolated--mobiledoc blockquote {
   max-width: 600px;
-  margin: 2rem 0;
+  margin: 1em 0 2em;
   color: var(--cardboard-theme-blockquote-color);
   font-family: var(--cardboard-theme-blockquote-text);
   font-size: 40px;
