@@ -3,6 +3,7 @@
   --article-isolated-mobiledoc-width: 700px;
 
   width: 100%;
+  min-height: 100vh;
   margin: 0;
   background-color: var(--cardboard-theme-background-color, #fff);
   color: var(--cardboard-theme-text-color, #000);
