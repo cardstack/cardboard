@@ -11,6 +11,9 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
     name: 'Snowboarding'
   });
 
+  factory.addResource('cardstack-images', 'snowboarding-image')
+    .withRelated('file', { type: 'cardstack-files', id: 'snowboarding' });
+
   factory.addResource('articles', '1').withAttributes({
     slug: 'demo',
     title: 'Snow Fever: Ultimate Fun for Snowboarders, Skiers and all Winter Enthusiasts',
@@ -49,6 +52,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       ]
     }
   }).withRelated('category', { type: 'categories', id: 'snowboarding' })
+    .withRelated('cover-image', { type: 'cardstack-images', id: 'snowboarding-image' })
     .withRelated('theme', { type: 'themes', id: 'sharp' });
 }
 
