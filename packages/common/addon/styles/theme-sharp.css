@@ -64,13 +64,6 @@
   text-transform: uppercase;
 }
 
-.sharp-theme--mobiledoc p:first-of-type::first-letter {
-  margin-right: 1.25rem;
-  margin-top: 0;
-  font-size: 100px;
-  letter-spacing: 10px;
-}
-
 .sharp-theme--mobiledoc p {
   line-height: 2;
 }
