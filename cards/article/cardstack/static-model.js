@@ -7,6 +7,7 @@ factory.addResource('content-types', 'articles')
     fieldsets: {
       embedded: [
         { field: 'cover-image', format: 'embedded'},
+        { field: 'cover-image.file', format: 'embedded'},
         { field: 'theme', format: 'embedded' },
         { field: 'category', format: 'embedded' },
       ],
@@ -14,6 +15,7 @@ factory.addResource('content-types', 'articles')
         { field: 'theme', format: 'embedded' },
         { field: 'category', format: 'embedded' },
         { field: 'cover-image', format: 'embedded'},
+        { field: 'cover-image.file', format: 'embedded'},
       ]
     }
   })
