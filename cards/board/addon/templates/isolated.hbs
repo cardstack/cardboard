@@ -1,9 +1,16 @@
 <div class="board-isolated">
   <TopHeader></TopHeader>
-  <h1 data-test-board-isolated-title>{{content.title}}</h1>
-  {{#each content.articles as |article index|}}
-    <div data-test-board-isolated-article={{index}}>
-      {{cardstack-content content=article format="embedded"}}
-    </div>
-  {{/each}}
+  <header class="board-isolated__header">
+    <h2 class="board-isolated__title" data-test-board-isolated-title>
+      {{content.title}}
+    </h2>
+  </header>
+
+  <div class="board-isolated__articles">
+    {{#each content.articles as |article index|}}
+      <div data-test-board-isolated-article={{index}}>
+        {{cardstack-content content=article format="embedded"}}
+      </div>
+    {{/each}}
+  </div>
 </div>
