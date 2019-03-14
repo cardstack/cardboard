@@ -53,11 +53,9 @@
 }
 
 .dark-theme--mobiledoc p:first-of-type::first-letter {
-  margin-right: 1.25rem;
-  margin-top: -10px;
   color: var(--cardboard-theme-text-color);
-  font-size: 110px;
-  letter-spacing: 10px;
+  letter-spacing: 0.03em;
+  line-height: 0.8;
   text-shadow: -7px -2px 0 var(--cardboard-theme-highlight-color);
 }
 

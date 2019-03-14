@@ -3,6 +3,7 @@
   --article-isolated-mobiledoc-width: 700px;
 
   width: 100%;
+  min-height: 100vh;
   margin: 0;
   background-color: var(--cardboard-theme-background-color, #fff);
   color: var(--cardboard-theme-text-color, #000);
@@ -112,13 +113,13 @@
 /* Dropcap */
 .article-isolated--mobiledoc p:first-of-type::first-letter {
   float: left;
-  margin-right: 10px;
-  margin-top: -18px;
+  margin-right: 0.1em;
+  margin-top: -0.1em;
   color: var(--cardboard-theme-highlight-color);
   font-family: var(--cardboard-theme-dropcap-text);
-  font-size: 8em;
-  letter-spacing: 0;
-  line-height: 0.8;
+  font-size: 6em;
+  letter-spacing: 0.05em;
+  line-height: 0.9;
   text-shadow: 0 7px 16px var(--cardboard-theme-highlight-shadow-color);
 }
 .article-isolated--mobiledoc p:first-of-type {

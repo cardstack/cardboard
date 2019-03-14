@@ -28,13 +28,6 @@
   text-transform: uppercase;
 }
 
-.modern-theme--mobiledoc p:first-of-type::first-letter {
-  margin-right: 1.25rem;
-  margin-top: -10px;
-  font-size: 110px;
-  letter-spacing: 10px;
-}
-
 .modern-theme--mobiledoc blockquote {
   font-size: 24px;
   letter-spacing: 5px;
