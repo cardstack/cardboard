@@ -64,6 +64,42 @@ module.exports = function () {
                 permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
               },
             },
+            'chris-tse': {
+              type: 'github-users',
+              id: 'chris-tse',
+              attributes: {
+                name: "Chris Tse",
+                'avatar-url': "https://pbs.twimg.com/profile_images/1015884620649263105/sEyENPV__400x400.jpg",
+                permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
+              },
+            },
+            'ed-faulkner': {
+              type: 'github-users',
+              id: 'ed-faulkner',
+              attributes: {
+                name: "Ed Faulkner",
+                'avatar-url': "https://pbs.twimg.com/profile_images/908888965511557120/RchEuRgc_400x400.jpg",
+                permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
+              },
+            },
+            'hassan-abdel-rahman': {
+              type: 'github-users',
+              id: 'hassan-abdel-rahman',
+              attributes: {
+                name: "Hassan Abdel-Rahman",
+                'avatar-url': "https://pbs.twimg.com/profile_banners/19314136/1412974815/1500x500",
+                permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
+              },
+            },
+            'cardstack-team': {
+              type: 'github-users',
+              id: 'cardstack-team',
+              attributes: {
+                name: "The Cardstack Team",
+                'avatar-url': "https://cardstack.com/favicon.ico",
+                permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
+              },
+            },
           }
         }
       });

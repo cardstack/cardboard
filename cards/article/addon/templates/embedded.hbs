@@ -4,17 +4,21 @@
                {{if (and cardstackTools.editing (not coverImageBackgroundImageCss)) 'cardstack-image-placeholder'}}"
                style={{coverImageBackgroundImageCss}}></div>
   {{/cs-field}}
-  <h2 data-test-article-embedded-title>{{content.title}}</h2>
-  <p data-test-article-embedded-description>{{content.description}}</p>
-  <div data-test-article-embedded-author>{{content.authorName}}</div>
-  <div data-test-article-embedded-published-date>{{publishedDate}}</div>
-  {{#cs-field content 'category' as |category|}}
-    <div data-test-article-embedded-category>
-      {{#if (and cardstackTools.editing (not category))}}
-        Enter Category
-      {{else}}
-        {{category.name}}
-      {{/if}}
-    </div>
-  {{/cs-field}}
+  <div class="article-embedded__attrs-container">
+    {{#if content.authorName}}
+      <div class="article-embedded--author-name" data-test-article-embedded-author>by {{content.authorName}}</div>
+    {{/if}}
+    <div class="article-embedded--published-date" data-test-article-embedded-published-date>{{publishedDate}}</div>
+    <h2 class="article-embedded--title" data-test-article-embedded-title>{{content.title}}</h2>
+    <p class="article-embedded--description" data-test-article-embedded-description>{{content.description}}</p>
+    {{#cs-field content 'category' as |category|}}
+      <div class="article-embedded--category-name" data-test-article-embedded-category>
+        {{#if (and cardstackTools.editing (not category))}}
+          Enter Category
+        {{else}}
+          {{category.name}}
+        {{/if}}
+      </div>
+    {{/cs-field}}
+  </div>
 </a>

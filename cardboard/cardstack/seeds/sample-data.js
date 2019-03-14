@@ -9,7 +9,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
     { type: 'articles', id: '1'},
     { type: 'articles', id: 'algodiversity-decentralized-algorithmic-governance'},
     { type: 'articles', id: 'ten-reasons-love-cardstack'},
-    { type: 'articles', id: 'white-paper-economics'},
+    { type: 'articles', id: 'token-vesting-contract'},
     { type: 'articles', id: 'decentralized-software'},
     { type: 'articles', id: 'what-is-cardstack-hub'},
     { type: 'articles', id: 'cardstack-dot-bc'},
@@ -19,27 +19,6 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
     { type: 'articles', id: 'tally-protocol'},
     { type: 'articles', id: 'experience-layer'},
   ]);
-
-  factory.addResource('github-users', 'chris-tse')
-  .withAttributes({
-    name: "Chris Tse",
-    permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
-  });
-  factory.addResource('github-users', 'ed-faulkner')
-  .withAttributes({
-    name: "Ed Faulkner",
-    permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
-  });
-  factory.addResource('github-users', 'hassan-abdel-rahman')
-  .withAttributes({
-    name: "Hassan Abdel-Rahman",
-    permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
-  });
-  factory.addResource('github-users', 'cardstack-team')
-  .withAttributes({
-    name: "The Cardstack Team",
-    permissions: ['cardstack/cardboard-data:read', 'cardstack/cardboard-data:write']
-  });
 
   factory.addResource('categories', 'snowboarding').withAttributes({ name: 'Snowboarding' });
   factory.addResource('categories', 'developers').withAttributes({ name: 'Developers' });
@@ -80,6 +59,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
   factory.addResource('articles', '1').withAttributes({
     slug: 'demo',
     title: 'Snow Fever: Ultimate Fun for Snowboarders, Skiers and all Winter Enthusiasts',
+    description: 'Secret vacation location: Enjoy some peace and quiet, have fun and be one with nature.',
     body: {
       'atoms': [],
       'cards': [],
@@ -116,7 +96,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
     }
   }).withRelated('category', { type: 'categories', id: 'snowboarding' })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'snowboarding-image' })
-    .withRelated('theme', { type: 'themes', id: 'sharp' });
+    .withRelated('theme', { type: 'themes', id: 'sharp' })
+    .withRelated('author', { type: 'github-users', id: 'cardstack-team' });
 
     const article = {
       'atoms': [],

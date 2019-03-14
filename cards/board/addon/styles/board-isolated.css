@@ -21,7 +21,13 @@
   max-width: var(--cardboard-isolated-container-max-width);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 30px;
+  grid-column-gap: 30px;
+  grid-row-gap: 60px;
   padding-top: 25px;
   margin: 60px auto;
+}
+
+.board-isolated__articles .board-isolated__article--container {
+  width: 380px;
+  max-height: 500px;
 }

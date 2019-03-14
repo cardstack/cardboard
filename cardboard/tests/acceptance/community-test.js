@@ -38,6 +38,7 @@ module('Acceptance | cardboard', function(hooks) {
   test('emedded article renders', async function(assert) {
     await visit('/');
 
+    assert.dom('[data-test-article-embedded-author]').hasText('by Writer McWriteface');
     assert.dom('[data-test-article-embedded-title]').hasText('Hello');
     assert.dom('[data-test-article-embedded-description]').hasText(`Why doors?`);
     assert.dom('[data-test-article-embedded-published-date]').hasAnyText();

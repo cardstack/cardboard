@@ -1,6 +1,10 @@
 .article-embedded {
   display: block;
   text-decoration: none;
+  background: var(--cardboard-white);
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,0.35);
+  border-radius: 5px;
+  font-family: var(--cardboard-regular-text);
 }
 
 .article-embedded--cover-image.cardstack-image-placeholder {
@@ -9,9 +13,54 @@
 
 .article-embedded--cover-image {
   width: 100%;
-  min-height: 10rem;
+  height: 200px;
+  border-radius: 5px 5px 0 0;
 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.article-embedded__attrs-container {
+  height: 300px;
+  padding: 20px 25px;
+  position: relative;
+}
+
+.article-embedded--author-name, .article-embedded--published-date {
+  font-size: 12px;
+  color: var(--cardboard-black);
+  letter-spacing: 0.1px;
+  line-height: 20px;
+}
+
+.article-embedded--title {
+  font-family: var(--cardboard-medium-text);
+  font-size: 20px;
+  color: var(--cardboard-black);
+  letter-spacing: 0.08px;
+  line-height: 26px;
+}
+
+.article-embedded--description {
+  font-size: 14px;
+  color: var(--cardboard-muted-gray);
+  letter-spacing: 0.1px;
+  line-height: 22px;
+}
+
+.article-embedded--category-name {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  border: solid 1px var(--cardboard-darker-border-gray);
+  border-radius: 3px;
+  font-family: var(--cardboard-bold-text);
+  font-size: 10px;
+  color: var(--cardboard-muted-gray);
+  letter-spacing: 0.3px;
+  text-align: center;
+  line-height: 24px;
+  text-transform: uppercase;
+  padding: 0 10px;
 }
