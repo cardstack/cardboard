@@ -8,7 +8,7 @@
 
   <div class="board-isolated__articles">
     {{#each content.articles as |article index|}}
-      <div data-test-board-isolated-article={{index}}>
+      <div class="board-isolated__article--container" data-test-board-isolated-article={{index}}>
         {{cardstack-content content=article format="embedded"}}
       </div>
     {{/each}}

@@ -10,7 +10,7 @@ import { task } from 'ember-concurrency';
 
 const defaultTheme = 'modern';
 const defaultReadersGroup = 'github-writers';
-const dateFormat = 'MMM d, YYYY h:mm a';
+const dateFormat = 'MMM d, YYYY';
 
 export default Component.extend(SetReadersMixin, {
   cardstackSession: service(),
