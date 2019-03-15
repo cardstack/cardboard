@@ -9,6 +9,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
 
     readStream.type = 'cardstack-files';
     readStream.id = filename.replace(/\..+/, '');
+    let pathSegments = filename.split('/');
+    readStream['filename'] = pathSegments[pathSegments.length - 1];
 
     models.push(readStream);
   });
