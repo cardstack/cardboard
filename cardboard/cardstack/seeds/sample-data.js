@@ -60,6 +60,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
     slug: 'demo',
     title: 'Snow Fever: Ultimate Fun for Snowboarders, Skiers and all Winter Enthusiasts',
     description: 'Secret vacation location: Enjoy some peace and quiet, have fun and be one with nature.',
+    'published-date': '2019-03-15T03:43:02.992Z',
+    'created-date': '2019-03-15T03:43:02.992Z',
     body: {
       'atoms': [],
       'cards': [],
@@ -113,7 +115,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'algodiversity-decentralized-algorithmic-governance',
       title: 'Algodiversity: Toward Fair Decentralized Governance',
       description: 'When our lives are governed by powerful algorithms, we need to fight back on the same level',
-      publishedDate: '2018-05-08T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: { 'atoms': [], 'cards': [], 'markups': [['strong']], 'version': '0.3.1', 'sections': [[1, 'p', [[0, [], 0, 'Governance consists of rules, judgment calls, and action. On the Internet, your digital life is increasingly governed by algorithms — a script or program that follows instructions to make judgment calls across a variety of situations, and then respond with some kind of action in each instance.In our networked world, algorithms have increasing influence over the distribution of information and wealth. Often these algorithms will sit between two parties, but only one party will have control over the algorithm — or even know how it works.When you are in this kind of asymmetric relationship, it has economic consequences. You are reduced to praying that you will be “blessed by the algorithm.”']]]] }
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'algodiversity-image' })
@@ -127,7 +130,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'from-speculation-to-utility',
       title: 'From Speculation to Utility',
       description: 'A blueprint for mass market adoption of decentralized apps',
-      publishedDate: '2018-08-30T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'speculation-image' })
@@ -141,7 +145,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'ten-reasons-love-cardstack',
       title: 'Ten Reasons to Love Cardstack',
       description: 'Why you should support the Cardstack Project',
-      publishedDate: '2018-05-30T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'ten-reasons-image' })
@@ -155,7 +160,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'what-is-cardstack-hub',
       title: 'What is the Cardstack Hub?',
       description: 'The Hub lets apps easily handle multiple data sources across the blockchain and the cloud',
-      publishedDate: '2018-07-16T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'developer-whatisthecardstackhub-image' })
@@ -170,7 +176,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'using-postgresql',
       title: 'Using PostgreSQL to Index and Query Blockchain Data',
       description: 'Improving the latency and consistency of indexing and querying on- and off-chain data',
-      publishedDate: '2018-06-19T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'developer-usingpostgresql-image' })
@@ -183,7 +190,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'tally-protocol',
       title: 'The Tally Protocol: Scaling Ethereum with Untapped GPU Power',
       description: 'We don’t need new hardware. Just a smarter approach',
-      publishedDate: '2018-03-18T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'developer-thetallyprotocol-image' })
@@ -198,7 +206,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'composable-design',
       title: 'Composable Design with Card UI',
       description: 'Card UI means you can mix and match apps from the cloud and decentralized Internet',
-      publishedDate: '2018-07-19T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'developer-composabledesign-image' })
@@ -213,7 +222,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'running-ethereum',
       title: 'Running an Ethereum Cardstack Hub Application',
       description: 'How to run a Cardstack Hub against your smart contract',
-      publishedDate: '2018-08-29T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'running-ethereum-image' })
@@ -228,7 +238,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'upgradable-smart-contracts-solidity',
       title: 'Upgradable Smart Contracts in Solidity',
       description: 'Solving the riddle of how to improve immutable Ethereum code',
-      publishedDate: '2018-01-29T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'token-cardstacksupgradablesmart-image' })
@@ -242,7 +253,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'scalable-payment-pools-solidity',
       title: 'Scalable Payment Pools in Solidity',
       description: 'Paying a lot of people without paying a lot of gas',
-      publishedDate: '2018-01-30T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'token-scalablepaymentpools-image' })
@@ -256,7 +268,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'token-vesting-contract',
       title: 'Building a Token Vesting Contract',
       description: 'How to maintain long-term relationships with members of your token ecosystem',
-      publishedDate: '2018-03-01T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'token-buildingatokenvesting-image' })
@@ -270,7 +283,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'crypto-market-volatile',
       title: 'Why the Crypto Market is Volatile',
       description: 'If we want prices to stabilize, we better get building',
-      publishedDate: '2018-02-06T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'token-whythecryptomarket-image' })
@@ -284,7 +298,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'white-paper-economics',
       title: 'White Paper: Economics',
       description: 'How open-sourced software development can be fueled by a token-backed economy',
-      publishedDate: '2017-11-01T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'token-whitepapereconomics-image' })
@@ -298,7 +313,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'cardstack-electron-app',
       title: 'Cardstack to Develop Electron App',
       description: 'Enabling Cardstack to run on a local environment, and quickly deploy to the cloud',
-      publishedDate: '2017-06-22T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'developer-cardstacktodevelop-image' })
@@ -312,7 +328,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'data-driven-algorithms',
       title: 'Data-driven Algorithms for dApps',
       description: 'How to get beyond the limitations of the Ethereum Virtual Machine',
-      publishedDate: '2018-02-09T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'developer-datadrivenalgorithms-image' })
@@ -326,7 +343,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'blockchain-real-world',
       title: 'Blockchain for the Real World',
       description: 'Chris shares thoughts about progressive decentralization at Beyond Blocks Tokyo',
-      publishedDate: '2018-04-25T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'community-blockchainfortherealworld-image' })
@@ -339,7 +357,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'experience-layer',
       title: 'Interview: What is the \'Experience Layer\'?',
       description: 'Chris joins the hosts of the Bad Crypto podcast to explain how Cardstack is the missing piece of the decentralized Internet',
-      publishedDate: '2018-05-17T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'community-interviewwhatistheexperience-image' })
@@ -353,7 +372,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'decentralized-software',
       title: 'A Decentralized Software Ecosystem for Everyone',
       description: 'Why Cardstack is a game changer for developers',
-      publishedDate: '2018-05-26T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'community-adecentralizedsoftware-image' })
@@ -367,7 +387,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'four-ways-to-improve',
       title: 'Four Ways to Improve the Decentralized Internet',
       description: 'Cardstack’s plan to create a better user experience for blockchain',
-      publishedDate: '2018-05-29T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'community-fourwaystoimprove-image' })
@@ -381,7 +402,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'silicon-valley-silo',
       title: 'Breaking Down the Silicon Valley Silo',
       description: 'Why interdisciplinary collaboration is the future of blockchain',
-      publishedDate: '2018-05-25T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'community-breakingdownthesiliconvalley-image' })
@@ -395,7 +417,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'analysis-in-chains',
       title: 'Interview: Analysis in Chains with Chris Tse',
       description: 'Chris explains the Cardstack Framework and how it benefits developers',
-      publishedDate: '2018-05-27T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'community-interviewanalysisinchains-image' })
@@ -409,7 +432,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'zeppelinos-contract-upgrade',
       title: 'Cardstack Adopts ZeppelinOS to Grow Token Ecosystem',
       description: 'ZeppelinOS is adopted in our second smart contract upgrade',
-      publishedDate: '2018-09-10T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'feature-contract-upgrade-image' })
@@ -423,7 +447,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'healthy-software-ecosystem',
       title: 'Growing a Healthy Software Ecosystem',
       description: 'Lead Developer Ed Faulkner explains Cardstack’s journey to mass adoption',
-      publishedDate: '2018-08-10T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'feature-growingahealthy-image' })
@@ -437,7 +462,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'blockchain-beyond',
       title: 'Blockchain Beyond Transactions',
       description: 'How to decentralize algorithmic decision making',
-      publishedDate: '2018-02-09T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'feature-blockchainbeyond-image' })
@@ -453,7 +479,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'cardstack-dot-bc',
       title: 'Cardstack and DotBC to Tackle Music Rights',
       description: 'A partnership to solve the inefficiencies in music and media metadata storage',
-      publishedDate: '2018-06-02T10:00:00'
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'community-cardstackanddotbc-image' })
     .withRelated('theme', { type: 'themes', id: 'modern' })
@@ -465,7 +492,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'progressive-decentralization',
       title: 'Progressive Decentralization Is the Key to Mass Adoption',
       description: 'Chris Tse writes for Nasdaq',
-      publishedDate: '2018-06-28T10:00:00'
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'feature-progressivedecentralization-image' })
     .withRelated('category', { type: 'categories', id: 'community' })
@@ -477,7 +505,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
     .withAttributes({
       slug: 'data-privacy-blockchain',
       title: 'How to Fight Poor Data Privacy with Blockchain Apps',
-      publishedDate: '2018-04-18T10:00:00',
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'data-privacy-blockchain-image' })
     .withRelated('category', { type: 'categories', id: 'crypto' })
@@ -489,7 +518,8 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
     .withAttributes({
       slug: 'blockchain-users-control-data',
       title: 'How Blockchain Puts Users Back in Control of Their Data',
-      publishedDate: '2018-04-16T10:00:00'
+      'published-date': '2019-03-15T03:43:02.992Z',
+      'created-date': '2019-03-15T03:43:02.992Z',
     })
     .withRelated('cover-image', { type: 'cardstack-images', id: 'nasdaq-backincontrol-image' })
     .withRelated('category', { type: 'categories', id: 'crypto' })
