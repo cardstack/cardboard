@@ -33,7 +33,8 @@ factory.addResource('content-types', 'articles')
     }),
 
     factory.addResource('fields', 'subhead').withAttributes({
-      fieldType: '@cardstack/core-types::string'
+      fieldType: '@cardstack/core-types::string',
+      editorComponent: 'field-editors/string-text-area'
     }),
 
     factory.addResource('fields', 'description').withAttributes({
