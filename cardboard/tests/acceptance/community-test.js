@@ -7,12 +7,13 @@ import Fixtures from '@cardstack/test-support/fixtures';
 const scenario = new Fixtures({
   create(factory) {
     setupTestArticle(factory);
+
     factory.addResource('boards', 'community')
     .withAttributes({
       title: 'Community'
     })
     .withRelated('articles', [
-      { type: 'articles', id: '123' }
+      { type: 'articles', id: '123' },
     ]);
   },
 });

@@ -1,0 +1,1 @@
+export { default } from 'cardboard-article/services/article-registration';

@@ -8,7 +8,7 @@ const { join } = require('path');
 const { readdirSync, existsSync } = require('fs');
 const cardDir = join(__dirname, '../../');
 
-let factory, env, writers, searchers, sessions;//, githubWriter, githubReader;
+let factory, env, writers, searchers, sessions;
 
 async function createArticle(attributes={}, readers='everyone') {
   if (!attributes.slug) {
