@@ -9,7 +9,7 @@
 
 <div class="article-isolated {{content.theme.id}}-theme" data-test-article-isolated={{content.theme.id}}>
   <TopHeader></TopHeader>
-  
+
   <div class="article-isolated--wrapper">
     <header class="article-isolated--header">
       {{#cs-field content "coverImage"}}
@@ -32,10 +32,9 @@
     <div>
       {{#cs-field content 'description' name=description}}
         {{#if (or content.description editMode)}}
-          <p data-test-article-isolated-description>{{content.description}}</p>
+          <h2 class="article-isolated--description" data-test-article-isolated-description>{{content.description}}</h2>
         {{/if}}
       {{/cs-field}}
-      <div data-test-article-isolated-published-date>{{publishedDate}}</div>
       {{#cs-field content "category" as |category|}}
         <div data-test-article-isolated-category>
           {{#if (and editMode (not category))}}

@@ -14,6 +14,12 @@
   margin: 0 auto;
 }
 
+.article-isolated--description.article-isolated--description {
+  max-width: var(--article-isolated-mobiledoc-width);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .article-isolated--mobiledoc {
   max-width: var(--article-isolated-mobiledoc-width);
   margin: 0 auto;
@@ -70,6 +76,7 @@
 
 /* BELOW ARE MOBILEDOC OVERRIDES */
 
+.article-isolated--description,
 .article-isolated--subhead,
 .article-isolated--mobiledoc h2 {
   margin: 0;
