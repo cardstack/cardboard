@@ -103,6 +103,13 @@ factory.addResource('content-types', 'articles')
       }
     }),
 
+    factory.addResource('computed-fields', 'mobiledoc-images').withAttributes({
+      editorOptions: { hideFromEditor: true },
+      'computed-field-type': '@cardstack/mobiledoc::mobiledoc-cards',
+      params: {
+        mobiledocFields: ['body']
+      }
+    }),
   ]);
 
 factory.addResource('constraints')

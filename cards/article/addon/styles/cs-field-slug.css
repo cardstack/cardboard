@@ -3,7 +3,7 @@
 }
 .cs-field-editor-section.cs-field-slug .field-editor {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
 .cs-field-editor-section.cs-field-slug input[type="text"] {
   margin-bottom: 0;
