@@ -40,16 +40,22 @@
   letter-spacing: -0.1px;
 }
 
+.sharp-theme .article-isolated--description {
+  max-width: var(--cardboard-theme-mobiledoc-width);
+}
+
 .sharp-theme--mobiledoc {
   max-width: var(--cardboard-theme-mobiledoc-width);
 }
 
+.sharp-theme h2.article-isolated--description,
 .sharp-theme--mobiledoc h2:first-of-type {
   padding: 2em 3em;
   text-align: center;
   letter-spacing: 10px;
 }
 
+.sharp-theme .article-isolated--description,
 .sharp-theme--mobiledoc h2 {
   padding: 2em 0;
   font-size: 18px;

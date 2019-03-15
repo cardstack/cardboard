@@ -138,21 +138,10 @@ module.exports = function () {
       mayLogin: true
     });
 
-  factory.addResource('grants', 'cardstack-files-world-write')
+  factory.addResource('grants', 'cardstack-files-world-read')
     .withRelated('who', [{ type: 'groups', id: 'everyone' }])
     .withRelated('types', [
-      { type: 'content-types', id: 'cardstack-files' }
-    ])
-    .withAttributes({
-      'may-read-resource': true,
-      'may-read-fields': true,
-      'may-create-resource': true,
-      'may-write-fields': true
-    });
-
-  factory.addResource('grants', 'cardstack-images-world-read')
-    .withRelated('who', [{ type: 'groups', id: 'everyone' }])
-    .withRelated('types', [
+      { type: 'content-types', id: 'cardstack-files' },
       { type: 'content-types', id: 'cardstack-images' }
     ])
     .withAttributes({

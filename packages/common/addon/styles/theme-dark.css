@@ -40,6 +40,7 @@
   z-index: -1;
 }
 
+.dark-theme .article-isolated--description,
 .dark-theme--subhead,
 .dark-theme--mobiledoc h2 {
   font-weight: 400;

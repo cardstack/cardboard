@@ -20,6 +20,7 @@
   text-transform: uppercase;
 }
 
+.modern-theme .article-isolated--description,
 .modern-theme--subhead,
 .modern-theme--mobiledoc h2 {
   padding-right: 1.5em;
