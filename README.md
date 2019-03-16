@@ -2,7 +2,7 @@
 
 Live version here: https://staging-cardboard.stack.cards/
 
-We are using this GitHub repo as our content data source. Feel free to peruse: 
+We are using this GitHub repo as our content data source. Feel free to peruse: https://github.com/cardstack/cardboard-data
 
 ## Prerequisites
 
