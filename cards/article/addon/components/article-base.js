@@ -6,14 +6,17 @@ import { inject as service } from '@ember/service';
 import SetReadersMixin from '../mixins/set-readers';
 import RSVP from 'rsvp';
 import { csImageUrl } from '@cardstack/image/helpers/cs-image-url';
-import { task } from 'ember-concurrency';
+import { task, waitForProperty } from 'ember-concurrency';
+import { htmlSafe } from '@ember/string';
 
 const defaultTheme = 'modern';
 const defaultReadersGroup = 'github-writers';
 const dateFormat = 'MMM d, YYYY';
+const communityBoardId = 'community';
 
 export default Component.extend(SetReadersMixin, {
   cardstackSession: service(),
+  articleRegistration: service(),
   cardstackTools: service(),
   modelLoader: service(),
   store: service(),
@@ -22,10 +25,13 @@ export default Component.extend(SetReadersMixin, {
 
   didReceiveAttrs() {
     if (this.get('cardstackTools.active')) {
+
       // this will populate the drop downs when in editing mode for all the models--not just the ones we are using.
       // no need to issue these requests when not in editng mode as the spaces will take care of loading the models
       // that we actually use (also we side step not having to deal with leaky async in fastboot)
       this.get('loadData').perform(['theme', 'category']).then(() => {
+        this.get('registerArticleAfterSave').perform();
+
         if (this.get('content.id')) { return; }
 
         if (!this.get('content.author')) {
@@ -49,12 +55,23 @@ export default Component.extend(SetReadersMixin, {
     yield RSVP.all(types.map(type => this.get('modelLoader').load(type)));
   }).drop(),
 
+  // This is a workaround for the fact that we do not yet have query based relationships.
+  // Rather the client is responsible for fashioning the relationship from the board to the articles.
+  // Please refactor this out after we have query based relationships.
+  registerArticleAfterSave: task(function * () {
+    yield waitForProperty(this, 'content.isSaving', true);
+    yield waitForProperty(this, 'content.isSaving', false);
+    yield waitForProperty(this, 'content.id', id => Boolean(id));
+
+    yield this.get('articleRegistration.registerArticle').perform(communityBoardId, this.get('content.id'));
+  }).drop(),
+
   coverImageBackgroundImageCss: computed('content.coverImage', function() {
     let image = this.get('content.coverImage');
     if (!image) { return; }
 
     let url = csImageUrl(image);
-    return `background-image:url(${url})`;
+    return htmlSafe(`background-image:url(${url})`);
   }),
 
   publishedDate: computed('content.publishedDate', function() {

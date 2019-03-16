@@ -9,12 +9,15 @@ const scenario = new Fixtures({
     let article1 = factory.addResource('articles', 'article-1')
       .withAttributes({
         title: 'Article 1',
-        slug: 'article1'
+        slug: 'article1',
+        'published-date': '2019-03-15T03:43:02.992Z',
+
       });
     let article2 = factory.addResource('articles', 'article-2')
       .withAttributes({
         title: 'Article 2',
-        slug: 'article2'
+        slug: 'article2',
+        'published-date': '2019-03-15T03:43:02.992Z',
       });
     factory.addResource('boards', '123')
       .withAttributes({

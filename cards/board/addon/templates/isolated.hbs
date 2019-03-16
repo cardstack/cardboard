@@ -7,7 +7,7 @@
   </header>
 
   <div class="board-isolated__articles">
-    {{#each content.articles as |article index|}}
+    {{#each content.publishedArticles as |article index|}}
       <div class="board-isolated__article--container" data-test-board-isolated-article={{index}}>
         {{cardstack-content content=article format="embedded"}}
       </div>

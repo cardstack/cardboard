@@ -100,7 +100,7 @@
       "name": "Launch card node tests",
       "program": "${workspaceRoot}/node_modules/.bin/_mocha",
       "console": "integratedTerminal",
-      "cwd": "${workspaceRoot}/cards/article",
+      "cwd": "${workspaceRoot}/cards/board",
       "env": {
         "HUB_ENVIRONMENT": "test",
       },
@@ -109,7 +109,7 @@
         "--timeout",
         "200000",
         // "--grep",
-        // "allows github-writer to view non-published article"
+        // "can register an article with a board when the user session is authorized"
       ]
     },
   ]

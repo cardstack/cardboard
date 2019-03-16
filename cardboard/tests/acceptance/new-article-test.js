@@ -1,9 +1,9 @@
 import { module, test } from 'qunit';
-import { click, currentURL, fillIn, waitFor } from '@ember/test-helpers';
+import { visit, click, currentURL, fillIn, waitFor } from '@ember/test-helpers';
 import { setupApplicationTest } from 'ember-qunit';
 import Fixtures from '@cardstack/test-support/fixtures';
 import { setupMockUser, login } from '../helpers/login';
-import { saveDocument, findTriggerElementWithLabel } from '../helpers/editor-utils';
+import { saveDocument, getDocument, findTriggerElementWithLabel } from '../helpers/editor-utils';
 import { getArticles, setupThemes, setupCategories } from '../helpers/article-utils';
 
 async function navigateToNewArticle() {
@@ -25,6 +25,7 @@ const scenario = new Fixtures({
     setupMockUser(factory);
     setupThemes(factory);
     setupCategories(factory);
+
     factory.addResource('boards', 'community').withAttributes({ title: 'Community' });
   },
   destroy() {
@@ -47,7 +48,7 @@ module('Acceptance | new article', function(hooks) {
     await navigateToNewArticle();
     assert.equal(currentURL(), '/articles/new');
     await setSlugField('test');
-    await saveDocument();
+    await saveDocument(this);
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -60,7 +61,7 @@ module('Acceptance | new article', function(hooks) {
     await click('[data-test-cs-field-editor="publishedDate"] .cs-toggle-switch');
 
     await setSlugField('test');
-    await saveDocument();
+    await saveDocument(this);
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -70,7 +71,7 @@ module('Acceptance | new article', function(hooks) {
   test('the authors field is set correctly for articles', async function(assert) {
     await navigateToNewArticle();
     await setSlugField('test');
-    await saveDocument();
+    await saveDocument(this);
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -81,7 +82,7 @@ module('Acceptance | new article', function(hooks) {
   test('the created-date field is set correctly for articles', async function(assert) {
     await navigateToNewArticle();
     await setSlugField('test');
-    await saveDocument();
+    await saveDocument(this);
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -91,7 +92,7 @@ module('Acceptance | new article', function(hooks) {
   test('the article publish date is not set when the article is not published', async function(assert) {
     await navigateToNewArticle();
     await setSlugField('test');
-    await saveDocument();
+    await saveDocument(this);
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -108,7 +109,7 @@ module('Acceptance | new article', function(hooks) {
     await click('[data-test-cs-field-editor="publishedDate"] .cs-toggle-switch');
 
     await setSlugField('test');
-    await saveDocument();
+    await saveDocument(this);
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
@@ -119,12 +120,48 @@ module('Acceptance | new article', function(hooks) {
     assert.dom('.cardboard-field-created-date--published-date').hasAnyText();
   });
 
+  test('when an article is saved it is registered with the community board', async function(assert) {
+    await navigateToNewArticle();
+    await setSlugField('test');
+    await saveDocument(this);
+
+    let [ { id } ] = await getArticles();
+    let board = await getDocument('boards', 'community');
+    let { id:registeredArticleId } = board.relationships.articles.data.find(i => i.id === id);
+
+    assert.equal(registeredArticleId, id);
+  });
+
+  test('when an article is in draft it does not appear on the community board', async function(assert) {
+    await navigateToNewArticle();
+    await setSlugField('test');
+    await fillIn('[data-test-cs-field-editor="title"] input[type="text"]', 'test');
+    await saveDocument(this);
+
+    await visit('/');
+
+    assert.dom('.article-embedded').doesNotExist();
+  });
+
+  test('when an article is published it appears on the community board', async function(assert) {
+    await navigateToNewArticle();
+    await setSlugField('test');
+    await click('[data-test-cs-field-editor="publishedDate"] .cs-toggle-switch');
+    await fillIn('[data-test-cs-field-editor="title"] input[type="text"]', 'test');
+    await saveDocument(this);
+
+    await visit('/');
+
+    assert.dom('.article-embedded').exists();
+    assert.dom('[data-test-article-embedded-title]').hasText('test');
+  });
+
   test('the theme has been set to the default theme', async function(assert) {
     await navigateToNewArticle();
     assert.dom('[data-test-article-isolated="modern"]').exists();
 
     await setSlugField('test');
-    await saveDocument();
+    await saveDocument(this);
 
     let [ article ] = await getArticles();
     assert.ok(article, 'an article was created');
