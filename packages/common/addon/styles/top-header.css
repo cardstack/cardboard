@@ -1,6 +1,5 @@
 .cardboard-top-header {
   --header-wrapper-max-width: 1440px;
-
   width: 100%;
   padding: 10px 30px;
   background-color: var(--cardboard-purple);
@@ -22,6 +21,7 @@
   color: var(--cardboard-white);
   text-decoration: none;
 }
+
 .cardboard-top-header__home:focus {
   outline-color: var(--cardboard-light-purple);
 }
@@ -36,12 +36,14 @@
   line-height: 1.4;
   text-transform: uppercase;
 }
-.cardboard-top-header__title > svg {
+
+.cardboard-top-header__title>svg {
   display: inline-block;
   vertical-align: middle;
   margin-right: 10px;
 }
-.cardboard-top-header__title > span {
+
+.cardboard-top-header__title>span {
   display: inline-block;
   vertical-align: middle;
 }
@@ -61,8 +63,8 @@
   letter-spacing: 0.2px;
   line-height: 1.5;
 }
-.cardboard-top-header__user:hover,
-.cardboard-top-header__user:focus {
+
+.cardboard-top-header__user:hover, .cardboard-top-header__user:focus {
   outline-color: var(--cardboard-light-purple);
   color: var(--cardboard-white);
   cursor: pointer;
@@ -100,6 +102,27 @@
   line-height: 1;
   text-transform: uppercase;
 }
-.cardboard-top-header__user-avatar--default > svg {
+
+.cardboard-top-header__user-avatar--default>svg {
   fill: var(--cardboard-light-purple);
+}
+
+.cardboard-top-header__login-button {
+  cursor: pointer;
+  margin-right: -50px;
+  background-image: url('/cardboard-common/images/GitHub-Mark-Light-120px-plus.png');
+  background-repeat: no-repeat;
+  background-size: 26px;
+  background-position: 19px 3px;
+  padding: 10px 20px 10px 60px;
+  background-color: transparent;
+  color: var(--light-foreground);
+  font-size: .8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  border-color: var(--faded-foreground);
+}
+
+.cardboard-top-header__login-button:hover {
+  background-color: var(--highlight-background);
 }
