@@ -1,5 +1,7 @@
 /* app.css */
 
+@import "error-card-isolated.css";
+
 body {
   box-sizing: border-box;
   background-color: var(--deep-background, #01002c); /* this style should probably move to tools package  */
