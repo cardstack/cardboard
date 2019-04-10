@@ -6,13 +6,12 @@ import { inject as service } from '@ember/service';
 import SetReadersMixin from '../mixins/set-readers';
 import RSVP from 'rsvp';
 import { csImageUrl } from '@cardstack/image/helpers/cs-image-url';
-import { task, waitForProperty } from 'ember-concurrency';
+import { task } from 'ember-concurrency';
 import { htmlSafe } from '@ember/string';
 
 const defaultTheme = 'modern';
 const defaultReadersGroup = 'github-writers';
-const dateFormat = 'MMM d, YYYY';
-const communityBoardId = 'community';
+const dateFormat = 'MMM Do, YYYY';
 
 export default Component.extend(SetReadersMixin, {
   cardstackSession: service(),
@@ -53,17 +52,6 @@ export default Component.extend(SetReadersMixin, {
 
   loadData: task(function * (types) {
     yield RSVP.all(types.map(type => this.get('modelLoader').load(type)));
-  }).drop(),
-
-  // This is a workaround for the fact that we do not yet have query based relationships.
-  // Rather the client is responsible for fashioning the relationship from the board to the articles.
-  // Please refactor this out after we have query based relationships.
-  registerArticleAfterSave: task(function * () {
-    yield waitForProperty(this, 'content.isSaving', true);
-    yield waitForProperty(this, 'content.isSaving', false);
-    yield waitForProperty(this, 'content.id', id => Boolean(id));
-
-    yield this.get('articleRegistration.registerArticle').perform(communityBoardId, this.get('content.id'));
   }).drop(),
 
   coverImageBackgroundImageCss: computed('content.coverImage', function() {

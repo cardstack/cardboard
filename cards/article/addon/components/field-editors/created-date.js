@@ -9,7 +9,7 @@ export default Component.extend({
     let date = this.get('content.createdDate');
     if (!date) { return; }
 
-    return moment(date).format('MMM d, YYYY h:mm a');
+    return moment(date).format('MMM D, YYYY h:mm a');
   }),
 
   isPublished: computed('content.publishedDate', function() {

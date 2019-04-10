@@ -96,6 +96,7 @@
     "lodash": "^4.17.11",
     "moment-timezone": "^0.5.11",
     "prember": "^1.0.0",
+    "qs": "6.6.0",
     "qunit-dom": "^0.8.0",
     "squishable-container": "^0.1.0",
     "web3": "^1.0.0-beta.37"

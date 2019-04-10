@@ -3,7 +3,7 @@ let factory = new JSONAPIFactory();
 factory.addResource('content-types', 'boards')
   .withAttributes({
     defaultIncludes: [
-      'articles', 'published-articles'
+      'published-articles'
     ],
     fieldsets: {
       isolated: [
@@ -13,13 +13,9 @@ factory.addResource('content-types', 'boards')
   })
   .withRelated('fields', [
     { type: 'fields', id: 'title'},
-    factory.addResource('computed-fields', 'published-articles').withAttributes({
-      computedFieldType: 'cardboard-board::published-articles'
-    }),
-    factory.addResource('fields', 'articles').withAttributes({
+    factory.addResource('fields', 'published-articles').withAttributes({
       fieldType: '@cardstack/core-types::has-many'
     })
-    .withRelated('related-types', [{ type: 'content-types', id: 'articles' }]),
   ]);
 
 factory.addResource('grants', 'boards-anonymous-read')

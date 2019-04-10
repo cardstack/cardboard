@@ -1,24 +1,17 @@
 const JSONAPIFactory = require('@cardstack/test-support/jsonapi-factory');
+const qs = require('qs');
 
 let factory = new JSONAPIFactory();
 
 if (process.env.HUB_ENVIRONMENT === 'development') {
   factory.addResource('boards', 'community').withAttributes({
     title: 'Community'
-  }).withRelated('articles', [
-    { type: 'articles', id: '1' },
-    { type: 'articles', id: 'algodiversity-decentralized-algorithmic-governance' },
-    { type: 'articles', id: 'ten-reasons-love-cardstack' },
-    { type: 'articles', id: 'token-vesting-contract' },
-    { type: 'articles', id: 'decentralized-software' },
-    { type: 'articles', id: 'what-is-cardstack-hub' },
-    { type: 'articles', id: 'cardstack-dot-bc' },
-    { type: 'articles', id: 'four-ways-to-improve' },
-    { type: 'articles', id: 'data-privacy-blockchain' },
-    { type: 'articles', id: 'healthy-software-ecosystem' },
-    { type: 'articles', id: 'tally-protocol' },
-    { type: 'articles', id: 'experience-layer' },
-  ]);
+  }).withRelatedLink('published-articles', `/api?${qs.stringify({
+    filter: {
+      type: { exact: 'articles' }
+    },
+    sort: '-published-date'
+  })}`);
 
   factory.addResource('categories', 'snowboarding').withAttributes({ name: 'Snowboarding' });
   factory.addResource('categories', 'developers').withAttributes({ name: 'Developers' });
@@ -60,7 +53,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
     slug: 'demo',
     title: 'Snow Fever: Ultimate Fun for Snowboarders, Skiers and all Winter Enthusiasts',
     description: 'Secret vacation location: Enjoy some peace and quiet, have fun and be one with nature.',
-    'published-date': '2019-03-15T03:43:02.992Z',
+    'published-date': '2019-04-15T03:43:02.992Z',
     'created-date': '2019-03-15T03:43:02.992Z',
     body: {
       'atoms': [],
@@ -114,7 +107,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'algodiversity-decentralized-algorithmic-governance',
       title: 'Algodiversity: Toward Fair Decentralized Governance',
       description: 'When our lives are governed by powerful algorithms, we need to fight back on the same level',
-      'published-date': '2019-03-15T03:43:02.992Z',
+      'published-date': '2019-03-25T03:43:02.992Z',
       'created-date': '2019-03-15T03:43:02.992Z',
       body: { 'atoms': [], 'cards': [], 'markups': [['strong']], 'version': '0.3.1', 'sections': [[1, 'p', [[0, [], 0, 'Governance consists of rules, judgment calls, and action. On the Internet, your digital life is increasingly governed by algorithms — a script or program that follows instructions to make judgment calls across a variety of situations, and then respond with some kind of action in each instance.In our networked world, algorithms have increasing influence over the distribution of information and wealth. Often these algorithms will sit between two parties, but only one party will have control over the algorithm — or even know how it works.When you are in this kind of asymmetric relationship, it has economic consequences. You are reduced to praying that you will be “blessed by the algorithm.”']]]] }
     })
@@ -129,7 +122,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'from-speculation-to-utility',
       title: 'From Speculation to Utility',
       description: 'A blueprint for mass market adoption of decentralized apps',
-      'published-date': '2019-03-15T03:43:02.992Z',
+      'published-date': '2019-03-24T03:43:02.992Z',
       'created-date': '2019-03-15T03:43:02.992Z',
       body: article
     })
@@ -144,7 +137,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'ten-reasons-love-cardstack',
       title: 'Ten Reasons to Love Cardstack',
       description: 'Why you should support the Cardstack Project',
-      'published-date': '2019-03-15T03:43:02.992Z',
+      'published-date': '2019-03-23T03:43:02.992Z',
       'created-date': '2019-03-15T03:43:02.992Z',
       body: article
     })
@@ -159,7 +152,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'what-is-cardstack-hub',
       title: 'What is the Cardstack Hub?',
       description: 'The Hub lets apps easily handle multiple data sources across the blockchain and the cloud',
-      'published-date': '2019-03-15T03:43:02.992Z',
+      'published-date': '2019-03-22T03:43:02.992Z',
       'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
@@ -175,7 +168,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'using-postgresql',
       title: 'Using PostgreSQL to Index and Query Blockchain Data',
       description: 'Improving the latency and consistency of indexing and querying on- and off-chain data',
-      'published-date': '2019-03-15T03:43:02.992Z',
+      'published-date': '2019-03-21T03:43:02.992Z',
       'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
@@ -189,7 +182,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'tally-protocol',
       title: 'The Tally Protocol: Scaling Ethereum with Untapped GPU Power',
       description: 'We don’t need new hardware. Just a smarter approach',
-      'published-date': '2019-03-15T03:43:02.992Z',
+      'published-date': '2019-03-20T03:43:02.992Z',
       'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
@@ -205,7 +198,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'composable-design',
       title: 'Composable Design with Card UI',
       description: 'Card UI means you can mix and match apps from the cloud and decentralized Internet',
-      'published-date': '2019-03-15T03:43:02.992Z',
+      'published-date': '2019-03-19T03:43:02.992Z',
       'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
@@ -221,7 +214,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'running-ethereum',
       title: 'Running an Ethereum Cardstack Hub Application',
       description: 'How to run a Cardstack Hub against your smart contract',
-      'published-date': '2019-03-15T03:43:02.992Z',
+      'published-date': '2019-03-18T03:43:02.992Z',
       'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
@@ -237,7 +230,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'upgradable-smart-contracts-solidity',
       title: 'Upgradable Smart Contracts in Solidity',
       description: 'Solving the riddle of how to improve immutable Ethereum code',
-      'published-date': '2019-03-15T03:43:02.992Z',
+      'published-date': '2019-03-17T03:43:02.992Z',
       'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
@@ -252,7 +245,7 @@ if (process.env.HUB_ENVIRONMENT === 'development') {
       slug: 'scalable-payment-pools-solidity',
       title: 'Scalable Payment Pools in Solidity',
       description: 'Paying a lot of people without paying a lot of gas',
-      'published-date': '2019-03-15T03:43:02.992Z',
+      'published-date': '2019-03-16T03:43:02.992Z',
       'created-date': '2019-03-15T03:43:02.992Z',
       body: article,
     })
