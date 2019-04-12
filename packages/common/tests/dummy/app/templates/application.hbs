@@ -1,3 +1,41 @@
-<h2 id="title">Welcome to Ember</h2>
+<h1 id="title">Component Library</h1>
 
-{{outlet}}
+<h2>Themes</h2>
+
+<h3>Modern Theme</h3>
+
+<h4>Title</h4>
+
+<Title @theme="modern" data-test-dummy-title>
+  <strong>Snow Fever:</strong> Ultimate Fun for <strong>Snowboarders</strong>, <strong>Skiers</strong>, and <strong>All Winter Enthusiasts</strong>
+</Title>
+
+<Title @theme="modern" @option="underline" data-test-dummy-title>
+  Snow Fever: Ultimate Fun for Snowboarders, Skiers, and All Winter Enthusiasts
+</Title>
+
+<Title @theme="modern" @option="outline" data-test-dummy-title>
+  Snow Fever: Ultimate Fun for Snowboarders, Skiers, and All Winter Enthusiasts
+</Title>
+
+
+
+<h3>Sharp Theme</h3>
+
+<h4>Title</h4>
+
+<Title @theme="sharp" data-test-dummy-title>
+  Snow Fever: Ultimate Fun for Snowboarders, Skiers, and All Winter Enthusiasts
+</Title>
+
+
+
+<h3>Dark Theme</h3>
+
+<h4>Title</h4>
+
+<div class="dark">
+  <Title @theme="dark" data-test-dummy-title>
+    Snow Fever: Ultimate Fun for Snowboarders, Skiers, and All Winter Enthusiasts
+  </Title>
+</div>

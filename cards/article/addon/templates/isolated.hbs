@@ -21,7 +21,10 @@
         {{/if}}
       {{/cs-field}}
       <hgroup class="article-isolated--hgroup {{if (or content.coverImage editMode) "article-isolated--hgroup-overlay"}} {{content.theme.id}}-theme--hgroup">
-        <h1 class="article-isolated--title {{content.theme.id}}-theme--title" data-test-article-isolated-title>{{content.title}}</h1>
+        <Title @theme={{content.theme.id}} data-test-article-isolated-title>
+          {{content.title}}
+        </Title>
+
         {{#cs-field content "subhead"}}
           {{#if (or content.subhead editMode)}}
             <h2 class="article-isolated--subhead {{content.theme.id}}-theme--subhead" data-test-article-isolated-subhead>{{content.subhead}}</h2>
