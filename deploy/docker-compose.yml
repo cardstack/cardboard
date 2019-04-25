@@ -35,6 +35,7 @@ services:
       - GITHUB_CLIENT_ID
       - GITHUB_CLIENT_SECRET
       - GITHUB_TOKEN
+      - WEBHOOK_URL
 
 networks:
   default:
