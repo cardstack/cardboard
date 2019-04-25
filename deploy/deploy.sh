@@ -68,6 +68,7 @@ if [ "$TRAVIS_PULL_REQUEST" == 'false' ]; then
             --env AWS_SECRET_ACCESS_KEY=$EMBER_DEPLOY_AWS_SECRET_ACCESS_KEY \
             --env AWS_ACCESS_KEY_ID=$EMBER_DEPLOY_AWS_ACCESS_KEY_ID \
             --env TRAVIS_COMMIT \
+            --env WEBHOOK_URL \
             --env TARGET_NAME \
             --workdir /srv/hub/cardboard \
             tests ./node_modules/.bin/ember deploy $target_env --verbose
