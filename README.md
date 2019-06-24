@@ -106,6 +106,14 @@ You can run the tests interactively via
 
     yarn test -s
 
+## Viewing the Hub database
+
+```sh
+psql -h localhost -p 5432 -d pgsearch_ cardboard_development -U postgres
+```
+
+If you don't have postgres installed, you use a Mac, and you have Homebrew installed, you can do `brew install postgresql`;
+
 ## Creating Cards
 
 You create a new card by running the generator in the `portfolio/` directory of the project:
