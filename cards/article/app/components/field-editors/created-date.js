@@ -1,1 +1,0 @@
-export { default } from 'cardboard-article/components/field-editors/created-date';

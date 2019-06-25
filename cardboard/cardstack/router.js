@@ -1,12 +1,4 @@
 module.exports = [{
-  path: '/articles/:friendly_id',
-  query: {
-    filter: {
-      type: { exact: 'articles' },
-      slug: { exact: ':friendly_id' }
-    }
-  },
-},{
   path: '/:type/:id',
   query: {
     filter: {
@@ -18,8 +10,8 @@ module.exports = [{
   path: '/',
   query: {
     filter: {
-      type: { exact: 'boards' },
-      id: { exact: 'community' }
+      type: { exact: 'welcome-messages' },
+      id: { exact: '1' }
     }
   },
 }];
