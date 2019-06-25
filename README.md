@@ -108,11 +108,14 @@ You can run the tests interactively via
 
 ## Viewing the Hub database
 
-```sh
-psql -h localhost -p 5432 -d pgsearch_ cardboard_development -U postgres
-```
+Note that the database has lots of whitespace padding within columns, so it is useful to use a client like [Postico](https://eggerapps.at/postico/) to view the data, or do `SELECT` for specific columns.
+Otherwise, the tables might appear empty.
 
-If you don't have postgres installed, you use a Mac, and you have Homebrew installed, you can do `brew install postgresql`;
+```sh
+yarn start-hub
+docker exec -it cardstack-pg psql -U postgres pgsearch_cardboard_development
+SELECT id from documents;
+```
 
 ## Creating Cards
 
