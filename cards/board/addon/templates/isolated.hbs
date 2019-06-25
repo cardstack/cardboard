@@ -6,6 +6,16 @@
     </h2>
   </header>
 
+  <div style="color:white;">
+    Demo
+    {{log content}}
+    {{#each content.myCardNames as |demo|}}
+      {{log demo}}
+      {{demo.title}}
+      {{demo.nickname}}
+    {{/each}}
+  </div>
+
   <div class="board-isolated__articles">
     {{#each content.publishedArticles as |article index|}}
       <div class="board-isolated__article--container" data-test-board-isolated-article={{index}}>

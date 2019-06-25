@@ -22,6 +22,7 @@
     "@cardstack/rendering": "^0.13.67",
     "babel-preset-env": "^1.7.0",
     "cardboard-article": "*",
+    "cardboard-my-card-name": "*",
     "cardboard-common": "*",
     "ember-auto-import": "^1.2.10",
     "ember-cli-babel": "^6.6.0",
