@@ -2,7 +2,7 @@
 
 Live version here: https://staging-cardboard.stack.cards/
 
-We are using this GitHub repo as our content data source. Feel free to peruse: https://github.com/cardstack/cardboard-data
+We are using this GitHub repo as our content data source. You can find it here: https://github.com/cardstack/cardboard-data
 
 ![4 Edges](https://user-images.githubusercontent.com/61075/54470192-3eff1f00-477a-11e9-8d1b-e02ecca32268.png)
 
