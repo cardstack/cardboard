@@ -1,5 +1,7 @@
 # Card Board
 
+Cardboard is a demo of the Card SDK.
+
 Live version here: https://staging-cardboard.stack.cards/
 
 We are using this GitHub repo as our content data source. Feel free to peruse: https://github.com/cardstack/cardboard-data
