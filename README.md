@@ -106,6 +106,17 @@ You can run the tests interactively via
 
     yarn test -s
 
+## Viewing the Hub database
+
+Note that the database has lots of whitespace padding within columns, so it is useful to use a client like [Postico](https://eggerapps.at/postico/) to view the data, or do `SELECT` for specific columns.
+Otherwise, the tables might appear empty.
+
+```sh
+yarn start-hub
+docker exec -it cardstack-pg psql -U postgres pgsearch_cardboard_development
+SELECT id from documents;
+```
+
 ## Creating Cards
 
 You create a new card by running the generator in the `portfolio/` directory of the project:
