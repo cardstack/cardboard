@@ -28,20 +28,20 @@ COPY code-layer/ ./
 # Setup PaperTrail logging, note that the port 41828 is
 # a port that has been assigned for Cardstack's account.
 # Log file emitters can be managed in PaperTrail's dashboard.
-RUN curl -L https://github.com/papertrail/remote_syslog2/releases/download/v0.20/remote-syslog2_0.20_amd64.deb -o remote-syslog2.deb \
-  && dpkg -i ./remote-syslog2.deb \
-  && apt-get install -f \
-  && rm ./remote-syslog2.deb
-RUN mkdir -p /srv/hub/logs \
-  && echo '\
-files: \n\
-  - /srv/hub/logs/node.log\n\
-destination:\n\
-  host: logs3.papertrailapp.com\n\
-  port: 41828\n\
-  protocol: tls\n\
-pid_file: /var/run/remote_syslog.pid'\
-> /etc/log_files.yml
+# RUN curl -L https://github.com/papertrail/remote_syslog2/releases/download/v0.20/remote-syslog2_0.20_amd64.deb -o remote-syslog2.deb \
+#   && dpkg -i ./remote-syslog2.deb \
+#   && apt-get install -f \
+#   && rm ./remote-syslog2.deb
+# RUN mkdir -p /srv/hub/logs \
+#   && echo '\
+# files: \n\
+#   - /srv/hub/logs/node.log\n\
+# destination:\n\
+#   host: logs3.papertrailapp.com\n\
+#   port: 41828\n\
+#   protocol: tls\n\
+# pid_file: /var/run/remote_syslog.pid'\
+# > /etc/log_files.yml
 
 CMD remote_syslog --hostname "${TARGET_ENV:-unknown_env}_$(hostname)" && yarn start-hub 2>&1 | tee -a /srv/hub/logs/node.log
 

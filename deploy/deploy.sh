@@ -41,7 +41,7 @@ if [ "$TRAVIS_PULL_REQUEST" == 'false' ]; then
   export TARGET_ENV="cardboard-$target_env"
 
   # This needs to be exported because our docker-compose.yml below is interpolating it
-  export CONTAINER_REPO=680542703984.dkr.ecr.us-east-1.amazonaws.com/cardboard
+  export CONTAINER_REPO=492763807298.dkr.ecr.us-east-1.amazonaws.com/cardstack-sandbox
 
   export INITIAL_DATA_DIR=/srv/hub/cardboard/cardstack
 
