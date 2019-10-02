@@ -27,6 +27,7 @@ if [ "$TRAVIS_PULL_REQUEST" == 'false' ]; then
                   LOG_LEVELS \
                   GIT_PRIVATE_KEY \
                   GIT_BRANCH_PREFIX \
+                  ECR_ENDPOINT \
                   CARDSTACK_SESSIONS_KEY; do
       command="export ${variable}=\$${target_env}_${variable}"
       eval $command
@@ -41,7 +42,7 @@ if [ "$TRAVIS_PULL_REQUEST" == 'false' ]; then
   export TARGET_ENV="cardboard-$target_env"
 
   # This needs to be exported because our docker-compose.yml below is interpolating it
-  export CONTAINER_REPO=680542703984.dkr.ecr.us-east-1.amazonaws.com/cardboard
+  export CONTAINER_REPO=ECR_ENDPOINT
 
   export INITIAL_DATA_DIR=/srv/hub/cardboard/cardstack
 

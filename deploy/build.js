@@ -39,12 +39,12 @@ moduleRootFolders.forEach(moduleRoot => {
 
 let dockerImageLabel = specialBranches.includes(process.env.TRAVIS_BRANCH) ? process.env.TRAVIS_BRANCH : process.env.TRAVIS_BUILD_ID || 'latest';
 try {
-  process.stdout.write(`Retrieving docker build from 680542703984.dkr.ecr.us-east-1.amazonaws.com/cardboard:${dockerImageLabel} ...`);
-  execSync(`docker pull 680542703984.dkr.ecr.us-east-1.amazonaws.com/cardboard:${dockerImageLabel}`);
+  process.stdout.write(`Retrieving docker build from ${process.env.ECR_ENDPOINT}:${dockerImageLabel} ...`);
+  execSync(`docker pull ${process.env.ECR_ENDPOINT}:${dockerImageLabel}`);
 } catch (err) {
   if (!/manifest.*not found/.test(err.message)) {
     throw err;
   }
   process.stdout.write(`No build cache found for cardboard:${dockerImageLabel}, building from scratch.`);
 }
-execSync(`docker build -f ${join(context, 'Dockerfile')} --cache-from 680542703984.dkr.ecr.us-east-1.amazonaws.com/cardboard:${dockerImageLabel} -t cardboard ${context}`, { stdio: 'inherit' });
+execSync(`docker build -f ${join(context, 'Dockerfile')} --cache-from ${process.env.ECR_ENDPOINT}:${dockerImageLabel} -t cardboard ${context}`, { stdio: 'inherit' });
