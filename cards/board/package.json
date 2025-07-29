@@ -67,7 +67,7 @@
     "ember-try": "^1.0.0",
     "eslint-plugin-ember": "^5.2.0",
     "eslint-plugin-node": "^7.0.1",
-    "koa": "2",
+    "koa": "3",
     "loader.js": "^4.7.0",
     "qunit-dom": "^0.8.0",
     "supertest": "^2.0.1"
