@@ -29,7 +29,7 @@
     "koa-better-route": "^0.1.0",
     "koa-compose": "^3.2.1",
     "koa-json-body": "^5.3.0",
-    "lodash": "^4.17.11"
+    "lodash": "^4.17.23"
   },
   "devDependencies": {
     "@cardstack/authentication": "^0.13.67",
